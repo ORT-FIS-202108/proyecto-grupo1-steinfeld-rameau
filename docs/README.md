@@ -108,7 +108,7 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 ## User Stories
 
-***
+
 
 **ID:** #1
 
@@ -246,6 +246,80 @@ A continuación se encuentra el diagrama del modelo conceptual.
 **Criterios de aceptación:**
 - Se deberá incluír un menú de usuarios para dar fácil acceso a las funcionalidades del sistema.
 - El menú deberá incluír: "Movimientos", "Categorías", "Moneda" y "Gráficos".
-- 
-***
+
+## User Cases
+
+**Título:** Ingreso de movimiento
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Movimientos" en el menú | 2. Se abre la pantalla de "Movimientos" |
+| 3. Presiona el botón de "Agregar movimiento" | 4. Se despliega el formulario de ingreso de movimiento |
+| 5. Completa los datos del movimiento |  |
+| 6. Presiona "Guardar movimiento" | 7. Se guarda el movimiento y se muestra la pantalla de "Movimientos" |
+
+**Curso alterno**
+
+7.1: El sistema no puede guardar el movimiento, el usuario continúa viendo el formulario con los datos ingresados.
+
+****
+
+**Título:** Listado de movimientos
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Movimientos" en el menú | 2. Se abre la pantalla de "Movimientos" |
+|  | 3. Se muestra la lista de movimientos |
+
+**Curso alterno**
+
+3.1: Aún no hay movimientos, se muestra un mensaje: "Aún no se han registrado movimientos.".
+
+****
+
+**Título:** Modificación de movimiento
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Movimientos" en el menú | 2. Se abre la pantalla de "Movimientos" |
+| 3. Selecciona un movimiento a modificar | 4. Se muestra un formulario con los campos del movimiento a modificar |
+| 5. Se modifican los campos del formulario | |
+| 6. Presiona "Guardar movimiento" | 7. Se guarda el movimiento y se muestra la pantalla de "Movimientos" |
+
+**Curso alterno**
+
+7.1: El sistema no puede guardar el movimiento, el usuario continúa viendo el formulario con los datos ingresados.
+
+****
+
+**Título:** Eliminación de movimiento
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Movimientos" en el menú | 2. Se abre la pantalla de "Movimientos" |
+| 3. Selecciona un movimiento a eliminar | 4. Se elimina el movimiento |
+|  | 5. Se muestra la pantalla de "Movimientos" |
+
+**Curso alterno**
+
+4.1: El sistema no puede eliminar el movimiento, se muestra la pantalla de "Movimientos".
+
+****
+
     
