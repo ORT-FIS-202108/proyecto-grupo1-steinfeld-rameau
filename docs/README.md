@@ -4,9 +4,15 @@
 
 Parte del trabajo de investigación incluyó la creación de 5 diferentes User Personas, a continuación se detalla cada uno de los casos. Se eligieron personas de diferentes edades y con diferentes actividades diarias (trabajo, estudio, ocio, etc.).
 
-![Daniel Ruiz Díaz](./investigacion/userpersonas/DanielRuizDiaz.png)
+![Ana Laura Lopez](./investigacion/userpersonas/AnaLauraLopez.png)
+
+![Daniel Ruiz Diaz](./investigacion/userpersonas/DanielRuizDiaz.png)
 
 ![Javier Gutierrez](./investigacion/userpersonas/JavierGutierrez.png)
+
+![Leandro Pereira](./investigacion/userpersonas/LeandroPereira.png)
+
+![Monica Gonzalez](./investigacion/userpersonas/MonicaGonzalez.png)
 
 ## Encuesta abierta
 
