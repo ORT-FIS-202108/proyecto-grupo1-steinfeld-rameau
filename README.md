@@ -3,8 +3,14 @@
 | Identificación del proyecto
 |-----------
 | Fundamentos de Ingeniería de Software
-ID M4A - Docente: Alejandro Adorjan
+N3A AN - Docentes: Miguel Sánchez y Gabriela Sánchez
+
 Estudiantes: 
+
+|Nombre| Nro. de estudiante|
+|----|----|
+| Alvaro Rameau | 182035 |
+| Stella Steinfeld | 229398 |
 
 Lectura: 30-ago-2021
 
