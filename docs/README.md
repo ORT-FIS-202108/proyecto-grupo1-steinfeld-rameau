@@ -258,7 +258,7 @@ A continuación se encuentra el diagrama del modelo conceptual.
 - Se deberá incluir un menú de usuarios para dar fácil acceso a las funcionalidades del sistema.
 - El menú deberá incluir: "Movimientos", "Categorías", "Moneda" y "Gráficos".
 
-## User Cases
+## Use Cases
 
 **Título:** Ingreso de movimiento
 
@@ -448,7 +448,7 @@ A continuación se encuentra el diagrama del modelo conceptual.
 | 1. Presiona "Gráficos" en el menú | 2. Se abre la pantalla de "Gráficos" |
 | 3. Selecciona "Movimientos mes a mes" | 4. Se muestra un gráfico de movimientos mes a mes comenzando 12 meses atrás |
 
-# 2) Validación de requerimientos
+# 3) Validación de requerimientos
 
 ## Walktrough
 
@@ -479,8 +479,6 @@ Entendemos que es un punto importante, por ende se tomó la desición de hacer o
 
 **Les gustaría tener una "Papelera de movimientos" para recuperar movimientos eliminados por accidente**
 
-### Cambios a aplicar basados en comentarios.
-
 No encontramos una justificación muy grande para implementar este requerimiento, entendemos que si se elimina un movimiento or accidente, un usuario podría volver a ingresarlo fácilmente.
 
 **Movimiento periódicos o recurrentes**
@@ -494,7 +492,7 @@ También creemos que esto se va un poco fuera del campo de "Finanzas personales"
 
 ### Listado de funcionalidades a modificar:
 
-####Hacer obligatorios los campos de fecha, tipo y categoría
+#### Hacer obligatorios los campos de fecha, tipo y categoría
 
 **ID:** #1
 
@@ -529,7 +527,7 @@ También creemos que esto se va un poco fuera del campo de "Finanzas personales"
 
 Basándonos en los resultados del walktrough y en un análisis de la documentación anterior aclaramos que cumplimos con los puntos del checklist de requerimientos y de casos de uso.
 
-# Reflexión
+# 4) Reflexión
 
 ## Detalle de trabajo individual
 
