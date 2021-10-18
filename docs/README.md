@@ -114,11 +114,11 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Ingreso de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder registrar de forma fácil mis ingresos y egresos para poder llevar un control de los mismos.
+**Narrativa:** Como usuario del sistema, quiero poder registrar de forma fácil mis ingresos y egresos para poder llevar un control de los mismos.
 
 **Criterios de aceptación:**
 - Se debe permitir el registro de movimientos desde un formulario sencillo.
-- Cada movimiento debe incluír: monto, descripción, tipo, categoría y fecha.
+- Cada movimiento debe incluir: monto, descripción, tipo, categoría y fecha.
 - Se debe diferenciar los movimientos del tipo "gasto" de los del tipo "ingreso".
 
 ***
@@ -127,7 +127,7 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Listado de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder ver una lista de todos los movimientos que ingresé.
+**Narrativa:** Como usuario del sistema, quiero poder ver una lista de todos los movimientos que ingresé.
 
 **Criterios de aceptación:**
 - Se deben listar los movimientos ordenados por fecha.
@@ -143,7 +143,7 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Modificación de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder modificar un movimiento previamente ingresado para poder corregir errores cometidos al ingresarlo.
+**Narrativa:** Como usuario del sistema, quiero poder modificar un movimiento previamente ingresado para poder corregir errores cometidos al ingresarlo.
 
 **Criterios de aceptación:**
 - Desde la lista de movimientos se debe permitir editar el movimiento seleccionado.
@@ -156,7 +156,7 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Eliminación de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder eliminar un movimiento previamente ingresado por error.
+**Narrativa:** Como usuario del sistema, quiero poder eliminar un movimiento previamente ingresado por error.
 
 **Criterios de aceptación:**
 - Desde la lista de movimientos se debe permitir eliminar el movimiento seleccionado.
@@ -168,12 +168,13 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Selección de moneda
 
-**Narrtiva:** Como usuario del sistema, quiero poder seleccionar una moneda por defecto para mis gastos.
+**Narrativa:** Como usuario del sistema, quiero poder seleccionar una moneda por defecto para mis gastos.
 
 **Criterios de aceptación:**
 - Se debe permitir seleccionar una moneda "general" a todo el sistema.
 - Cada vez que un usuario cambia de moneda, esta se aplica a todos los movimientos.
 - La selección de moneda debe estar visible desde el menú del sistema.
+- La lista de monedas disponibles será: peso uruguayo (UYU), peso argentino (ARS), dólar estadounidense (USD) y real (BRL).
 
 ***
 
@@ -181,11 +182,11 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Ingreso de categorías de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder ingresar diferentes categorías para aplicar a movimientos. De esta forma puedo visualizar fácilmente en qué áreas estoy gastando mi dinero.
+**Narrativa:** Como usuario del sistema, quiero poder ingresar diferentes categorías para aplicar a movimientos. De esta forma puedo visualizar fácilmente en qué áreas estoy gastando mi dinero.
 
 **Criterios de aceptación:**
 - Se debe permitir ingresar una categoría para ser utilizada en la clasificación de movimientos.
-- La categoría debe incluír: título, descripción y tipo.
+- La categoría debe incluir: título, descripción y tipo.
 - Los tipos de las categorías son los mismos que aplican a los movimientos: gasto ó ingreso.
 
 ***
@@ -194,10 +195,11 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Listado de categorías de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder ver una lista de las categorías que he ingresado, pudiendo de esta forma, decidir si necesito agregar alguna nueva o eliminar alguna existente.
+**Narrativa:** Como usuario del sistema, quiero poder ver una lista de las categorías que he ingresado, pudiendo de esta forma, decidir si necesito agregar alguna nueva o eliminar alguna existente.
 
 **Criterios de aceptación:**
 - Se deben listar las categorías por orden alfabético, usando el título para generar el orden.
+- El sistema tiene una categoría por defecto ya creada, esta es "Otros" y la misma no se puede eliminar.
 
 ***
 
@@ -205,11 +207,12 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Eliminación de categorías de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder eliminar una categoría si no necesito mas de ella.
+**Narrativa:** Como usuario del sistema, quiero poder eliminar una categoría si no necesito mas de ella.
 
 **Criterios de aceptación:**
 - Desde la lista de categorías se debe permitir eliminar una categoría seleccionada.
 - La eliminación de una categoría no necesita una confirmación extra.
+- So se debe permitir eliminar la categoría "Otros".
 
 ***
 
@@ -217,10 +220,10 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Exportación de movimientos
 
-**Narrtiva:** Como usuario del sistema, quiero poder exportar mis movimientos para poder trabajar con los mismos fuera del sistema.
+**Narrativa:** Como usuario del sistema, quiero poder exportar mis movimientos para poder trabajar con los mismos fuera del sistema.
 
 **Criterios de aceptación:**
-- Desde la lista de movimientos se debe permitir exportar la lista de movimientosa un archivo en formato CSV.
+- Desde la lista de movimientos se debe permitir exportar la lista de movimientos a un archivo en formato CSV.
 - La lista a exportar será la resultante de los filtros aplicados en el moment de hacer el "export".
 
 ***
@@ -229,11 +232,13 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Visualización de movimientos en gráficos
 
-**Narrtiva:** Como usuario del sistema, quiero ver gráficos de mis movimientos, de esta forma puedo entender visualmente en que categorías hay mas movimientos, y en hacer una comparativa de gastos mes a mes.
+**Narrativa:** Como usuario del sistema, quiero ver gráficos de mis movimientos, de esta forma puedo entender visualmente en que categorías hay mas movimientos, y en hacer una comparativa de gastos mes a mes.
 
 **Criterios de aceptación:**
 - Se deberá mostrar un gráfico de "torta" de movimientos por categoría del mes actual.
+- Las categorías que no tengan movimientos no se deberán mostrar en el gráfico.
 - Se deberá mostrar un gráfico de "barras" de movimientos por mes. Este gráfico mostrará información de hasta 12 meses atrás.
+- Se deberán mostrar datos con una antiguedad no mayor a 12 meses y desde el momento del cual se tenga registro.
 
 ***
 
@@ -241,11 +246,11 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 **Título:** Menú
 
-**Narrtiva:** Como usuario del sistema, quiero ver en un menú las diferentes funcionalidades que puedo hacer con el sistema. 
+**Narrativa:** Como usuario del sistema, quiero ver en un menú las diferentes funcionalidades que puedo hacer con el sistema. 
 
 **Criterios de aceptación:**
-- Se deberá incluír un menú de usuarios para dar fácil acceso a las funcionalidades del sistema.
-- El menú deberá incluír: "Movimientos", "Categorías", "Moneda" y "Gráficos".
+- Se deberá incluir un menú de usuarios para dar fácil acceso a las funcionalidades del sistema.
+- El menú deberá incluir: "Movimientos", "Categorías", "Moneda" y "Gráficos".
 
 ## User Cases
 
@@ -321,5 +326,201 @@ A continuación se encuentra el diagrama del modelo conceptual.
 4.1: El sistema no puede eliminar el movimiento, se muestra la pantalla de "Movimientos".
 
 ****
+
+**Título:** Seleccionar moneda
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Moneda" en el menú | 2. Se abre la pantalla de "Moneda" |
+| 3. Selecciona la moneda a aplicar de una lista | 4. Se aplica la moneda al sistema |
+
+**Curso alterno**
+
+4.1: El sistema no puede aplicar la moneda, se muestra un mensaje de error "No se pudo aplicar la moneda, intente nuevamente.".
+
+****
+
+**Título:** Ingresar categoría
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Categorías" en el menú | 2. Se abre la pantalla de "Categorías" |
+| 3. Presiona el botón de "Agregar categoría"  | 4. Se despliega el formulario de ingreso de categoría |
+| 5. Completa los datos del movimiento |  |
+| 6. Presiona "Guardar categoría" | 7. Se guarda la categoría y se muestra la pantalla de "Categorías" |
+
+**Curso alterno**
+
+7.1: El sistema no puede guardar la categoría, el usuario continúa viendo el formulario con los datos ingresados.
+
+****
+
+**Título:** Listado de categorías
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Categorías" en el menú | 2. Se abre la pantalla de "Categorías" |
+|  | 3. Se muestra la lista de categorías |
+
+**Curso alterno**
+
+3.1: Aún no hay categorías, se muestra un mensaje: "Aún no se han registrado categorías.".
+
+****
+
+**Título:** Eliminación de categoría
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Categorías" en el menú | 2. Se abre la pantalla de "Categorías" |
+| 3. Selecciona la categoría a eliminar | 4. Se elimina la categoría |
+|  | 5. Se muestra la pantalla de "Categorías" |
+
+**Curso alterno**
+
+4.1: La categoría a eliminar tiene algún movimiento asociado, se muestra un mensaje "No se permite eliminar una categoría con movimientos asociados.".
+4.2: La categoría a eliminar es "Otros", se muestra un mensaje "No se permite eliminar una categoría creada por el sistema.".
+4.3: El sistema no puede eliminar la categoría, se muestra la pantalla de "Categorías".
+
+****
+
+**Título:** Exportar movimientos
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Movimientos" en el menú | 2. Se abre la pantalla de "Movimientos" |
+| 3. Aplica los filtros que crea conveniente a los movimientos | 4. Se muestra el listado de movimientos filtrados |
+| 5. Presiona el botón "Exportar a CSV" | 5. Se descarga un archivo CSV que contiene la lista de movimientos |
+
+**Curso alterno**
+
+5.1: El sistema no puede descargar el archivo, se muestra un mensaje de error "No se pudo exportar la lista, intente nuevamente.".
+
+****
+
+**Título:** Graficar movimientos por categoría
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Gráficos" en el menú | 2. Se abre la pantalla de "Gráficos" |
+| 3. Selecciona "Movimientos por Categoría" | 4. Se muestra un gráfico de movimientos por categoría para el mes actual |
+
+****
+
+**Título:** Graficar movimientos en un año 
+
+**Actor:** Usuario del sistema
+
+**Curso Normal:**
+
+| Acción de los actores | Respuesta del sistema |
+|----------|------------|
+| 1. Presiona "Gráficos" en el menú | 2. Se abre la pantalla de "Gráficos" |
+| 3. Selecciona "Movimientos mes a mes" | 4. Se muestra un gráfico de movimientos mes a mes comenzando 12 meses atrás |
+
+# 2) Validación de requerimientos
+
+Para la validación de requerimientos se realizó un Walktrough por los requerimientos funcionales y los use cases con 3 personas agenas al desarrollo del sistema. Vale aclarar que estas 3 personas son potenciales usuarios del sistema.  
+A continuación se detallan los comentarios obtenidos y nuestra opinión al respecto, al final de la lista se encuentra una lista con las modificaciones que se aceptaron y se implementarán.
+
+**Sería bueno contar con una opción de "Gasto compartido". Este gasto sería dividido entre diferentes usuarios.**
+
+Entendemos la motivación del comentario, pero pensamos que esto complicaría demasiado el sistema. Si el sistema llega a un estado en el cual es usado por muchas personas, seguramente esto sea un feature a agregar. Como se mencionó antes, primero hay que educar a los usuarios de manera sencilla.
+
+**Manejo de múltiples monedas**
+
+Sin duda esto es prioridad en la lista de mejoras. Dado que la primera versión es dirigida a un mercado local, creemos que el uso de una sola moneda da simplicidad, sin embargo nos hace cuestionar si es necesario poder cambiar de monedas.
+Optamos por dejar el feature tal como fue planteado, ya que si bien nuestro enfoque está en el mercado local, nadie descarta que no se pueda utilizar en otro lugar, o que alguien no quiera utilizarlo para gastos en otra moneda que no sea el peso uruguayo.
+
+**Además de exportar los datos en CSV les gustaría poder hacerlo en PDF**
+
+Entendemos que actualmente es muy fácil pasar de un archivo CSV a un PDF desde cualquier dispositivo. Pero tenemos en cuanta usuarios que no manejan la tecnología con tanta facilidad, por ende, decidimos agregar la opción de expotar a PDF.
+
+**Los gráficos suelen ser confusos (en general)**
+
+Muchas personas no suelen valerse de gráficos para entender o visualizar información. Creemos que la solución a esto está en educar a los usuarios a que utilicen esta herramienta, y entendemos que si a un usuario le resulta confuso, puede prescinidr de la misma. 
+
+**No todos los campos del movimiento deben ser obligatorios**
+
+La justificación que nos dieron es que alguien puede ver de alguna forma la información que están manipulando y puede uqe existan gastos que no quieran que se sepa a que corresponden.
+Entendemos que es un punto importante, por ende se tomó la desición de hacer obligatorio únicamente el tipo, la fecha y la categoría.
+
+**Les gustaría tener una "Papelera de movimientos" para recuperar movimientos eliminados por accidente**
+
+### Cambios a aplicar basados en comentarios.
+
+No encontramos una justificación muy grande para implementar este requerimiento, entendemos que si se elimina un movimiento or accidente, un usuario podría volver a ingresarlo fácilmente.
+
+**Movimiento periódicos o recurrentes**
+
+Sin duda es otro punto muy importante, y que esta en los primeros lugares de features a implementar. Para una primera versión creemos que es suficiente con registrar un movimiento en el momento en el que se hace. Además, implementar recurrencia implica bastante trabajo desde el punto de vista del desarrollo, para hacerlo en una versión 1.
+
+**Compartir listados por mail u otras aplicaciones**
+
+Además de la opción de exportar, creen que sería buena idea poder compartir los listados por otros medios. Entendemos que es una buena idea pero creemos que hace falta mayor refinamiento en la idea, hay que determinar cuáles serían los medios relevantes y hay que determinar si esto realmente aporta, ya que con la versión 1, un usuario podría descargarse un reporte y enviarlo por donde crea conveniente.
+También creemos que esto se va un poco fuera del campo de "Finanzas personales".
+
+### Listado de funcionalidades a modificar:
+
+####Hacer obligatorios los campos de fecha, tipo y categoría
+
+**ID:** #1
+
+**Título:** Ingreso de movimientos
+
+**Narrativa:** Como usuario del sistema, quiero poder registrar de forma fácil mis ingresos y egresos para poder llevar un control de los mismos.
+
+**Criterios de aceptación:**
+- Se debe permitir el registro de movimientos desde un formulario sencillo.
+- Cada movimiento debe incluir: monto, descripción, tipo, categoría y fecha.
+- Se debe diferenciar los movimientos del tipo "gasto" de los del tipo "ingreso".
+- Se deberán exigir de forma obligatoria los siguientes campos: fecha, tipo y categoría.
+- En caso de que el usuario no ingrese un título, este campo se nombrará por defecto con un string que representa la fecha y hora de creación.
+
+***
+
+####Exportar en formato PDF
+
+**ID:** #9
+
+**Título:** Exportación de movimientos
+
+**Narrativa:** Como usuario del sistema, quiero poder exportar mis movimientos para poder trabajar con los mismos fuera del sistema.
+
+**Criterios de aceptación:**
+- Desde la lista de movimientos se debe permitir exportar la lista de movimientos a un archivo en formato CSV o PDF.
+- La lista a exportar será la resultante de los filtros aplicados en el moment de hacer el "export".
+
+***
+
+
+
+
+
+
 
     
