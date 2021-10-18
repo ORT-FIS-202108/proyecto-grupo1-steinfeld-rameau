@@ -2,6 +2,11 @@
 
 Fecha de entrega: 18/10/2021
 
+|Nombre| Nro. de estudiante|
+|----|----|
+| Alvaro Rameau | 182035 |
+| Stella Steinfeld | 229398 |
+
 ## Repositorio Git
 
 Creación y uso de repositorios locales y remotos
@@ -478,6 +483,8 @@ A continuación se encuentra el diagrama del modelo conceptual.
 | 3. Selecciona "Balance" | 4. Se muestra un gráfico de movimientos mes a mes comenzando 12 meses atrás |
 
 ### Bocetos de IU
+
+[Aquí encontrará los bocetos para la version web y mobile del sistema.](bocetosiu/README.md)
 
 ## Validación y verificación
 
