@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="919" viewBox="0 0 428 919">
+  <defs>
+    <clipPath id="clip-Graficas_balance-mobile">
+      <rect width="428" height="919"/>
+    </clipPath>
+  </defs>
+  <g id="Graficas_balance-mobile" clip-path="url(#clip-Graficas_balance-mobile)">
+    <rect width="428" height="919" fill="#fff"/>
+    <text id="En_el_siguiente_gráfico_se_muestran_todos_los_movimientos_según_su_tipo_ingreso_o_egreso_desde_la_fecha_a_12_meses_hacia_atras" data-name="En el siguiente gráfico se muestran todos los 
+movimientos según su tipo (ingreso o egreso) 
+desde la fecha a 12 meses hacia atras" transform="translate(42 248)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">En el siguiente gráfico se muestran todos los </tspan><tspan x="0" y="26">movimientos según su tipo (ingreso o egreso) </tspan><tspan x="0" y="52">desde la fecha a 12 meses hacia atras</tspan></text>
+    <g id="Tabs_Line_Box_Style_1" data-name="Tabs / Line Box / Style 1" transform="translate(-77 -1871.365)">
+      <path id="Line" d="M27.57,2.989q-13.431.023-26.862.2C-.237,3.2-.235.215.707.205Q4.07.159,7.439.121C28.243-.088,49.05.006,69.854.17q4.87.038,9.741.081C87.449.227,95.3.279,103.162.489Q122.275.7,141.386.941q37.025.448,74.054.761c23.336.159,46.673.224,70.01.005,19.615-.184,39.232-.537,58.843-1.492.944-.045.94,2.939,0,2.984q-3.217.157-6.439.293c-20.2.845-40.4,1.134-60.6,1.268-23.552.154-47.1.049-70.654-.14q-37.055-.3-74.11-.8-10.791-.129-21.581-.256c.06,1.546-.734,3.12-2.382,3.061-26.222-.95-52.411.04-78.633.05C28.052,6.676,27.277,4.674,27.57,2.989Z" transform="translate(114 2069.219)"/>
+      <text id="Balance" transform="translate(185 2059)" font-size="25" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="-39.825" y="0">Balance</tspan></text>
+      <text id="Por_categorias" data-name="Por categorias" transform="translate(335.471 2059)" font-size="25" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="-74.263" y="0">Por categorias</tspan></text>
+    </g>
+    <path id="icons8-menu" d="M3.4,7a1.4,1.4,0,1,0,0,2.8H36.945a1.4,1.4,0,1,0,0-2.8Zm0,9.785a1.4,1.4,0,1,0,0,2.8H36.945a1.4,1.4,0,1,0,0-2.8Zm0,9.785a1.4,1.4,0,1,0,0,2.8H36.945a1.4,1.4,0,1,0,0-2.8Z" transform="translate(346.657 22)"/>
+    <text id="Logo" transform="translate(37 45)" font-size="24" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Logo</tspan></text>
+    <text id="Graficas" transform="translate(37 127)" font-size="34" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Graficas</tspan></text>
+    <g id="Drop_Downs_Base_Box_Action_1" data-name="Drop Downs / Base Box / Action 1" transform="translate(87.295 -998)">
+      <path id="Base_Box" data-name="Base Box" d="M71.586-60.762c-23.494-.379-46.993-.7-70.489-.214C.5-60.962,0-61.97,0-63.12Q.006-83.5.151-103.874c.3-50.706.971-101.5-.15-152.189a3.014,3.014,0,0,1,.306-1.543,18.977,18.977,0,0,1-.231-4.1q-.153-9.952,0-19.908c.037-2.443-.658-5.964,2.8-6.546a70.676,70.676,0,0,1,7.914-.535q3.815-.194,7.637-.3c9.659-.275,19.327-.269,28.994-.264,6.013,0,12.025.007,18.036-.056q20.212-.213,40.429-.438c14.9-.143,29.8-.259,44.707-.242,6.251.006,12.5.036,18.754.132q3.727.055,7.447.157c2.608.073,6.124-.12,6.642,2.937q.008.045.012.09a1.035,1.035,0,0,1,.025.18c.168,3.173.215,6.356.23,9.535.018,3.7-.015,7.409-.121,11.114-.051,1.757-.117,3.512-.216,5.266a14.42,14.42,0,0,1-.261,3,3.069,3.069,0,0,1,.287,1.513q-.448,20.392-.526,40.805c-.27,50.72.518,101.426.526,152.139,0,1.186-.5,2.115-1.1,2.144-13.178.6-26.358.864-39.54.942q-4.274.024-8.546.024C113.336-60.017,92.459-60.423,71.586-60.762ZM40.513-65.455c23.71.185,47.417.75,71.125,1.014,23.188.253,46.375.236,69.561-.78q-.015-19.333-.149-38.661c-.3-50.53-.966-101.152.139-151.661a10.034,10.034,0,0,1-3.246.306c-.324,0-.636-.008-.928,0q-4.011.076-8.027.143-8.577.15-17.15.286c-14.242.229-28.488.468-42.734.548-24.509.136-49.026.222-73.535.12-5.648-.027-11.25,0-16.9.3-5.02.262-10.424.538-15.3-.807a5.61,5.61,0,0,1-1.154-.449c.289,13.274.433,26.554.505,39.841.27,49.992-.5,99.976-.526,149.974q12.312-.241,24.621-.225Q33.663-65.51,40.513-65.455ZM8.67-286.586c-1.422.079-2.85.153-4.268.279-1.392.126-2.013.146-2.083,1.5-.059,1.183-.055,2.372-.069,3.555q-.061,4.7-.055,9.406,0,4.8.059,9.589c.014,1.206-.007,2.426.073,3.632.091,1.366.752,1.834,2.148,2.176a28.306,28.306,0,0,0,4.479.655,106.4,106.4,0,0,0,13.432-.1c3.01-.148,6.018-.3,9.014-.273,4.325.033,8.652.04,12.978.046q35.262.046,70.524-.179c15.839-.112,31.677-.418,47.516-.684l8.758-.149q1.825-.031,3.65-.064c.458-.009.948.007,1.445.023a14.138,14.138,0,0,0,2.931-.1c.972-.183,1.644-.449,1.841-1.4a7.111,7.111,0,0,0,.073-1.01c.041-.625.074-1.249.106-1.874.077-1.589.131-3.176.176-4.765.178-6.695.237-13.42-.116-20.112-.393-1.464-2.269-1.223-3.621-1.265-1.1-.033-2.2-.059-3.307-.086-26.307-.6-52.657-.159-78.975.127-12,.126-23.994.279-35.989.392-5.112.048-10.227.038-15.343.029q-3.11-.006-6.22-.008C28.1-287.236,18.373-287.152,8.67-286.586Z" transform="translate(114 1347)"/>
+    </g>
+    <rect id="Rectángulo_451" data-name="Rectángulo 451" width="178" height="207" transform="translate(204 77)" fill="#fff"/>
+    <text id="Movimientos" transform="translate(223.295 89)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Movimientos</tspan></text>
+    <text id="Categorias" transform="translate(223.295 114)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Categorias</tspan></text>
+    <text id="Graficas-2" data-name="Graficas" transform="translate(223.295 139)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Graficas</tspan></text>
+    <text id="Moneda" transform="translate(223.295 176.992)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Moneda</tspan></text>
+    <g id="Radios_Checked_1" data-name="Radios / Checked 1" transform="translate(-342 -2978)">
+      <text id="USD" transform="translate(690 3209)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="-16.668" y="0">USD</tspan></text>
+      <g id="Oval" transform="translate(646.003 3194.009)">
+        <path id="Oval-2" data-name="Oval" d="M1.778,7.925c.659-4.237,4.93-6.775,9.076-6.02,3.5.638,4.652,4.447,4.632,7.589-.035,4.969-6.342,6.274-10.1,4.676A5.913,5.913,0,0,1,1.807,7.691C1.93,6.57.174,6.578.051,7.691-.7,14.53,6.565,18.149,12.441,15.947A6.964,6.964,0,0,0,17.234,9.74C17.389,6,15.87,1.534,11.964.363,6.872-1.157.908,2.137.083,7.46-.09,8.563,1.6,9.041,1.778,7.925Z"/>
+        <path id="Oval-3" data-name="Oval" d="M-1331.992-3316.49a1.014,1.014,0,0,1,.018-.118,1.023,1.023,0,0,1,.015-.117,2.923,2.923,0,0,1,4.037-2.014,2.941,2.941,0,0,1,1.1,3.777,2.557,2.557,0,0,1-2.3,1.276A2.7,2.7,0,0,1-1331.992-3316.49Z" transform="translate(1337.886 3324.656)"/>
+      </g>
+    </g>
+    <g id="Radios_Checked_2" data-name="Radios / Checked 2" transform="translate(-342 -2978)">
+      <text id="R_" data-name="R$" transform="translate(685 3236)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="-11.385" y="0">R$</tspan></text>
+      <g id="Oval-4" data-name="Oval" transform="translate(646.003 3221.009)">
+        <path id="Oval-5" data-name="Oval" d="M-1331.95-3338.3a1,1,0,0,1,.021-.123,1.018,1.018,0,0,1,.011-.108c.827-5.332,6.8-8.631,11.9-7.109,3.912,1.173,5.434,5.648,5.278,9.393a6.975,6.975,0,0,1-4.8,6.217,10.224,10.224,0,0,1-3.585.645C-1327.989-3329.382-1332.552-3332.8-1331.95-3338.3Z" transform="translate(1332 3346)"/>
+        <path id="Oval-6" data-name="Oval" d="M-1331.992-3343.487a1.039,1.039,0,0,1,.018-.119,1.028,1.028,0,0,1,.015-.115,2.928,2.928,0,0,1,4.045-2.018,2.945,2.945,0,0,1,1.1,3.783,2.561,2.561,0,0,1-2.3,1.278A2.7,2.7,0,0,1-1331.992-3343.487Z" transform="translate(1337.896 3351.665)"/>
+      </g>
+    </g>
+    <g id="Radios_Default" data-name="Radios / Default" transform="translate(-342 -2978)">
+      <text id="UYU" transform="translate(691 3182)" font-size="18" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="-16.209" y="0">UYU</tspan></text>
+      <path id="Oval-7" data-name="Oval" d="M1.778,7.925c.659-4.237,4.93-6.775,9.076-6.02,3.5.638,4.652,4.447,4.632,7.589-.035,4.969-6.342,6.274-10.1,4.676A5.913,5.913,0,0,1,1.807,7.691C1.93,6.57.174,6.578.051,7.691-.7,14.53,6.565,18.149,12.441,15.947A6.964,6.964,0,0,0,17.234,9.74C17.389,6,15.87,1.534,11.964.363,6.872-1.157.908,2.137.083,7.46-.09,8.563,1.6,9.041,1.778,7.925Z" transform="translate(646.003 3167.009)"/>
+    </g>
+    <g id="Footer" transform="translate(37 797.682)">
+      <text id="_2021" data-name="© 2021" transform="translate(0.308 68.751)" font-size="20" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">© 2021</tspan></text>
+      <text id="Proyecto_para_Fundamentos_de_ingeniería_de_software_Stella_Steinfeld_y_Alvaro_Rameau" data-name="Proyecto para Fundamentos de 
+ingeniería de software 
+ Stella Steinfeld y Alvaro Rameau" transform="translate(0 -24)" font-size="20" font-family="TektonPro-Bold, Tekton Pro" font-weight="700"><tspan x="0" y="0">Proyecto para Fundamentos de </tspan><tspan x="0" y="28">ingeniería de software </tspan><tspan x="0" y="56" xml:space="preserve"> Stella Steinfeld y Alvaro Rameau</tspan></text>
+    </g>
+    <g id="Chart_Line" data-name="Chart / Line" transform="translate(-617.551 -371)">
+      <path id="line-2" data-name="line" d="M4.561,1.63c-1.292,40.643-3,119.154-3.012,119.606.118,20,.028,18.51,0,43.281.489,9.276.309,37.334.314,49.976.668,6.083,1.186,10.795,1.186,10.795s13.773.613,24.627.761c15.085.027,28.166.24,47.983.262,12.056.011,24.1.63,36.146.8,16.256.226,32.516.2,49.072.049,7.676-.07,15.647-.171,23.618-.286,21.749-.315,43.714-.169,65.417-1.945,2.17-.18,2.193-3.553,0-3.373-17.351,1.417-34.9,1.417-52.293,1.732-24.022.439-48.055.686-72.076.573q-39.731-.186-79.508-.944c-9.795-.18-36.716,0-38.9-.825S5.506,212.748,5.49,205.1c-.444-14.334-.388-23.773-.752-28.889-.292-10.194.031-19.151,0-24.925-.031-5.7-.385-8.1-.074-18.307.3-10-.322-18.1,0-28.384C5.734,70.458,6.869,36.041,7.97,1.63c.068-2.17-3.341-2.17-3.409,0Z" transform="translate(699.001 728.998)"/>
+      <path id="Trazado_960" data-name="Trazado 960" d="M2.291,116.35a2.413,2.413,0,0,1-1.855-.82,1.838,1.838,0,0,1,.492-2.79L36.962,89.7a2.568,2.568,0,0,1,2.393-.17l49.934,22.35L165.3,42.18a2.537,2.537,0,0,1,3.195-.11l67.533,53.05a1.834,1.834,0,0,1,.172,2.83,2.537,2.537,0,0,1-3.24.15L167.07,46.35,91.419,115.72a2.547,2.547,0,0,1-2.7.4l-50.2-22.46L3.642,115.96A2.5,2.5,0,0,1,2.291,116.35Z" transform="translate(710.006 745.585)"/>
+      <path id="Trazado_959" data-name="Trazado 959" d="M4.543,200.468a2.286,2.286,0,0,1-1.525-3.99l35.236-31.306L86.412,99.21a2.294,2.294,0,0,1,2.041-.938l77.214,6.311L232.55,1.052a2.288,2.288,0,0,1,3.853,2.47L168.775,108.209a2.284,2.284,0,0,1-2.11,1.04l-77.294-6.323L41.82,168.042a2,2,0,0,1-.333.366L6.068,199.884A2.3,2.3,0,0,1,4.543,200.468Z" transform="translate(710.006 736)" opacity="0.5"/>
+    </g>
+  </g>
+</svg>
