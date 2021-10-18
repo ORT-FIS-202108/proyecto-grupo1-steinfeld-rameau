@@ -1,5 +1,11 @@
 # 1) Elicitación 
 
+## Evidencia de actividades de investigación y fuentes de información:
+
+Para la elaboración de este documento nos basamos en las diapositivas mostradas en curso 2021 de Fundamentos de Ingeniería de Software de la Universidad ORT del Uruguay. 
+
+El siguiente link es el formulario de la encuesta realizada por el equipo: https://forms.gle/Xxk9gwaaHmC2rUbr6
+
 ## User Personas
 
 Parte del trabajo de investigación incluyó la creación de 5 diferentes User Personas, a continuación se detalla cada uno de los casos. Se eligieron personas de diferentes edades y con diferentes actividades diarias (trabajo, estudio, ocio, etc.).
@@ -444,6 +450,8 @@ A continuación se encuentra el diagrama del modelo conceptual.
 
 # 2) Validación de requerimientos
 
+## Walktrough
+
 Para la validación de requerimientos se realizó un Walktrough por los requerimientos funcionales y los use cases con 3 personas agenas al desarrollo del sistema. Vale aclarar que estas 3 personas son potenciales usuarios del sistema.  
 A continuación se detallan los comentarios obtenidos y nuestra opinión al respecto, al final de la lista se encuentra una lista con las modificaciones que se aceptaron y se implementarán.
 
@@ -516,6 +524,19 @@ También creemos que esto se va un poco fuera del campo de "Finanzas personales"
 - La lista a exportar será la resultante de los filtros aplicados en el moment de hacer el "export".
 
 ***
+
+## Checklist de requerimientos
+
+Basándonos en los resultados del walktrough y en un análisis de la documentación anterior aclaramos que cumplimos con los puntos del checklist de requerimientos y de casos de uso.
+
+# Reflexión
+
+## Detalle de trabajo individual
+
+## Técnicas aplicadas y aprendizajes
+ 
+
+
 
 
 
