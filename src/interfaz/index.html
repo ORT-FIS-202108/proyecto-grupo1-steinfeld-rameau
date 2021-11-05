@@ -22,7 +22,7 @@
 
             <button class="mdc-tab mdc-tab--active sample-content-tab" role="tab" aria-selected="true" tabindex="0">
               <span class="mdc-tab__content">
-                <span class="mdc-tab__text-label">Películas</span>
+                <span class="mdc-tab__text-label">Categorias</span>
               </span>
               <span class="mdc-tab-indicator mdc-tab-indicator--active">
                 <span
@@ -47,11 +47,49 @@
   </header>
 
   <main class="mdc-top-app-bar--fixed-adjust">
-    <section class="content">
-      <h1>Películas</h1>
+    <section class="content categorias mdc-layout-grid categorias">
+      <h1>Categorias</h1>
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-6">
+          <p>pepe</p>
+        </div>
+        <div class="mdc-layout-grid__cell--span-6 categorias__form">
+          <h2>Añadir nueva Categoria</h2>
+          <div class="categorias__form--input">
+            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--input mdc-text-field--no-label">
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+              <span class="mdc-text-field__resizer">
+              <input type="text" class="mdc-text-field__input" aria-labelledby="nombreCategoria" placeholder="Nombre de la categoria">
+            </span>
+            </label>
+          </div>
+          <div class="categorias__form--input">
+            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+              <span class="mdc-text-field__resizer">
+              <select aria-labelledby="tipoCategoria" class="mdc-text-field__input">
+                <option value="" aria-selected="true" data-value="" role="option">Seleccionar Tipo</option>
+                <option value="ingreso" aria-selected="true" data-value="ingreso" role="option">Ingreso</option>
+                <option value="egreso" aria-selected="true" data-value="egreso" role="option">Egreso</option>
+              </select>
+            </span>
+            </label>
+          </div>
+            <div class="button">
+              <button class="mdc-button mdc-button--raised" id="addButton">
+                <span class="mdc-button__label">Guardar</span>
+              </button>
+            </div>
+          </div>
+        </div>
     </section>
-    <section class="content sample-content--hidden">
-      <h1>Próximamente</h1>
+    <section class="content">
       <label class="mdc-text-field mdc-text-field--outlined" id="title">
         <span class="mdc-notched-outline">
           <span class="mdc-notched-outline__leading"></span>

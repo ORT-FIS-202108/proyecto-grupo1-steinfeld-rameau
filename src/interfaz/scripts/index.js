@@ -5,7 +5,7 @@ import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import {MDCSnackbar} from '@material/snackbar';
 import ListaPeliculas from '../../dominio/lista-peliculas.mjs';
-import Pelicula from '../../dominio/pelicula.mjs';
+import Categoria from '../../dominio/categoria.mjs';
 
 const listaPeliculas = new ListaPeliculas();
 
@@ -33,7 +33,7 @@ addButton.listen('click', () => {
   let year = textFieldYear.value;
   let genre = selectGenre.value;
   try {
-    let newPelicula = new Pelicula(title, genre, year);
+    let newCategoria = new Categoria(title, genre, year);
     listaPeliculas.agregar(newPelicula);
   } catch (error) {
     const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));

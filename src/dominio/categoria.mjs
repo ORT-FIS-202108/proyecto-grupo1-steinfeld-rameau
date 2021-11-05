@@ -1,7 +1,7 @@
 const MIN_ANIO = 1888;
 const MAX_ANIO = 2021;
 
-export default class Pelicula {
+export default class Categoria {
 
   constructor(titulo, genero, anio) {
     this.titulo = titulo;
