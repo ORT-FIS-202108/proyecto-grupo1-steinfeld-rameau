@@ -1,6 +1,6 @@
 @use "@material/theme" with (
-  $primary: #00bcd4,
-  $secondary: #f44336,
+  $primary: #512da8,
+  $secondary: #00796b,
   $background: #c7c7c7,
 );
 @use '@material/button/mdc-button';
@@ -32,25 +32,43 @@ html {
 }
 
 body {
-  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px auto;
 }
 
-.app-bar {
+.mdc-top-app-bar {
+  background-color: #512da8;
   position: absolute;
 }
 
-.mdc-top-app-bar {
-  z-index: 7;
-  @include icon-button.core-styles;
+.mdc-top-app-bar__title {
+  size: 25px;
 }
 
-section {
-  text-align: center;
+.img-topbar {
+  width: 2.5rem;
+  height: 2.5rem;
 }
+
+.mdc-tab-bar {
+  background-color: #8559da;
+}
+
+.mdc-tab__content .mdc-tab__text-label {
+  color: #ffffff;
+}
+
+.mdc-tab__content .mdc-tab__icon {
+color: #ffffff;
+}
+
+.mdc-tab-indicator .mdc-tab-indicator__content {
+  border: 2px solid #00796b
+}
+
 
 .content {
-  margin: 10rem auto;
+  margin: 5rem auto;
   padding-bottom: 20rem;
   text-align: center;
 }
@@ -59,22 +77,3 @@ section {
   display: none;
 }
 
-.mdc-tab {
-    background-color: #67daff;
-}
-
-.mdc-tab__content .mdc-tab__text-label {
-    color: black;
-}
-
-.mdc-text-field {
-    margin: 1rem auto;
-}
-
-.button {
-  margin-top: 1rem;
-}
-
-.mdc-snackbar__actions .mdc-button__label {
-  color: #67daff;
-}
