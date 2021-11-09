@@ -23,9 +23,11 @@
 @use "@material/menu/mdc-menu";
 @use "@material/select/styles";
 @use "@material/snackbar/mdc-snackbar";
+@use "@material/layout-grid/mdc-layout-grid";
 
 @include card.core-styles;
 @include textfield.core-styles;
+@include icon-button.core-styles;
 
 html {
   scroll-behavior: smooth;
@@ -34,6 +36,11 @@ html {
 body {
   font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px auto;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 }
 
 .mdc-top-app-bar {
@@ -48,6 +55,10 @@ body {
 .img-topbar {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.mdc-top-app-bar--fixed-adjust {
+  height: 100%;
 }
 
 .mdc-tab-bar {
@@ -77,3 +88,40 @@ color: #ffffff;
   display: none;
 }
 
+.mdc-list-item {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  font-size: 25px;
+}
+
+.icon-down {
+  color: #4caf50;
+}
+
+.icon-up {
+  color: #4caf50;
+}
+
+.mdc-icon-button {
+  border-radius: 50%;
+  color: #004c40;
+  font-size: 15px;
+}
+
+.footer {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 50px;
+  background-color: #512da8;
+  color: #ffffff;
+}
+
+.footer-main {
+  margin-right: 30px;
+}
+
+.footer-secondary {
+  color: #ffffff;
+  opacity: 0.8;
+}

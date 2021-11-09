@@ -11,7 +11,7 @@
   <header class="mdc-top-app-bar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <img src="assets/gastos.svg" alt="MisGastos" class="img-topbar">
+        <img src="assets/gastos.svg" alt="Logo de la aplicación" class="img-topbar">
         <span class="mdc-top-app-bar__title">MIS GASTOS</span>
       </section>
     </div>
@@ -35,7 +35,7 @@
             <button class="mdc-tab sample-content-tab" role="tab" aria-selected="false" tabindex="1">
               <span class="mdc-tab__content">
                 <span class="mdc-tab__icon material-icons" aria-hidden="true">category</span>
-                <span class="mdc-tab__text-label">Categorías</span>
+                <span class="mdc-tab__text-label">Categor&iacute;as</span>
               </span>
               <span class="mdc-tab-indicator">
                 <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -46,7 +46,7 @@
             <button class="mdc-tab sample-content-tab" role="tab" aria-selected="false" tabindex="1">
               <span class="mdc-tab__content">
                 <span class="mdc-tab__icon material-icons" aria-hidden="true">leaderboard</span>
-                <span class="mdc-tab__text-label">Gráficas</span>
+                <span class="mdc-tab__text-label">Gr&aacute;ficas</span>
               </span>
               <span class="mdc-tab-indicator">
                 <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -61,7 +61,35 @@
 
   <main class="mdc-top-app-bar--fixed-adjust">
     <section class="content">
-      <h1>Movimientos</h1>
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <h1>Movimientos</h1>
+        </div>
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell--span-6">
+            <ul class="mdc-list">
+              <li class="mdc-list-item" tabindex="0">
+                <span class="mdc-list-item__ripple"></span>
+                <div>
+                  <span class="material-icons icon-up">arrow_drop_up</span>
+                  <span class="mdc-list-item__text">Gasto</span>
+                </div>
+                <div>
+                  <button class="mdc-icon-button material-icons">
+                    <div class="mdc-icon-button__ripple"></div>
+                    edit
+                  </button>
+                  <button class="mdc-icon-button material-icons">
+                    <div class="mdc-icon-button__ripple"></div>
+                    delete
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mdc-layout-grid__cell--span-6">aca va el form </div>
+        </div>
+      </div>
     </section>
     <section class="content sample-content--hidden">
       <h1>Categorías</h1>
@@ -71,6 +99,10 @@
     </section>
   </main>
 
+  <footer class="footer">
+    <span class="footer-main">Fundamentos de Ingenier&iacute;a de Software</span>
+    <span class="footer-secondary">Stella Steinfeld - Alvaro Rameau &#9426 2021</span>
+  </footer>
 </body>
 <script src="bundle.js" async></script>
 
