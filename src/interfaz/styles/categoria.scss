@@ -1,0 +1,11 @@
+.categoria {
+  &__columna {
+    flex-direction: column;
+    display: flex;
+    padding: 0 20px;
+
+    &--input {
+      margin: 1rem 0 !important;
+    }
+  }
+}

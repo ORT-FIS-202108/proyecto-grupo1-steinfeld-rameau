@@ -23,6 +23,9 @@
 @use "@material/menu/mdc-menu";
 @use "@material/select/styles";
 @use "@material/snackbar/mdc-snackbar";
+@use "@material/layout-grid/mdc-layout-grid";
+
+@import "categoria";
 
 @include card.core-styles;
 @include textfield.core-styles;
@@ -45,14 +48,10 @@ body {
   @include icon-button.core-styles;
 }
 
-section {
-  text-align: center;
-}
 
 .content {
   margin: 10rem auto;
   padding-bottom: 20rem;
-  text-align: center;
 }
 
 .sample-content--hidden {
