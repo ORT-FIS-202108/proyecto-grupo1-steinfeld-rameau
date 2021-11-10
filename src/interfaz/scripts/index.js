@@ -8,6 +8,7 @@ import ListaCategorias from '../../dominio/lista-categorias.mjs';
 import Categoria from '../../dominio/categoria.mjs';
 
 const listaCategorias = new ListaCategorias();
+let categorias = listaCategorias.getCategorias();
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
@@ -27,21 +28,32 @@ const inputNombre = new MDCTextField(document.getElementById('nombre'));
 const selectTipo = new MDCSelect(document.querySelector('.mdc-select'));
 
 const addButton = new MDCRipple(document.getElementById('addButton'));
+const eliminarCategoria = new MDCRipple(document.querySelector('.categoria__columna--eliminar'));
+
+const listarCategorias = () => {
+  document.getElementById('listar-categorias').innerHTML = '';
+  for (let i = 0; i < categorias.length; i++) {
+    let newListElement = '<li>' + categorias[i].nombre + '<button class="categoria__columna--eliminar" id="eliminarCategoria' + categorias[i].id + '"></button>' + '</li>';
+    document.getElementById('listar-categorias').innerHTML += newListElement;
+  }
+}
 addButton.listen('click', () => {
   let nombre = inputNombre.value;
   let tipo = selectTipo.value;
+  let id = categorias.length;
   try {
-    let newCategoria = new Categoria(nombre, tipo);
+    let newCategoria = new Categoria(nombre, tipo, id);
     listaCategorias.agregar(newCategoria);
   } catch (error) {
     const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
     snackbar.labelText = error.message;
     snackbar.open();
   } finally {
-    let categorias = listaCategorias.getCategorias();
-    for (let i = 0; i < categorias.length; i++) {
-      document.getElementById('listar-categorias').innerHTML='<li>' + categorias[0].nombre + '</li>';
-    }
+    listarCategorias();
     console.log(categorias);
   }
+})
+
+eliminarCategoria.listen('click', () => {
+  console.log(eliminarCategoria);
 })
