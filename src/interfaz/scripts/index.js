@@ -4,10 +4,11 @@ import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import {MDCSnackbar} from '@material/snackbar';
-import ListaPeliculas from '../../dominio/lista-peliculas.mjs';
-import Pelicula from '../../dominio/pelicula.mjs';
+import ListaMovimientos from '../../dominio/lista-movimientos.mjs';
+import Movimiento from '../../dominio/movimiento.mjs';
 
-const listaPeliculas = new ListaPeliculas();
+const listaMovimientos = new ListaMovimientos();
+let movimientos = listaMovimientos.getMovimientos();
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
@@ -23,24 +24,34 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
   });
 });
 
-const textFieldTitle = new MDCTextField(document.getElementById('title'));
-const textFieldYear = new MDCTextField(document.getElementById('year'));
-const selectGenre = new MDCSelect(document.querySelector('.mdc-select'));
+const textFieldNombre = new MDCTextField(document.getElementById('nombre'));
+const textFieldValor = new MDCTextField(document.getElementById('valor'));
+const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
+const selectTipo = new MDCSelect(document.getElementById('select-tipo'));
 
 const addButton = new MDCRipple(document.getElementById('addButton'));
+
+const listarMovimientos = () => {
+  document.getElementById('listar-movimientos').innerHTML = '';
+  for (let i = 0; i < movimientos.length; i++) {
+    let newListElement = '<li>' + movimientos[i].nombre + '<button class="movimientos__columna--eliminar" id="eliminarMovimientos-' + movimientos[i].id + '"></button>' + '</li>';
+    document.getElementById('listar-movimientos').innerHTML += newListElement;
+  }
+}
 addButton.listen('click', () => {
-  let title = textFieldTitle.value;
-  let year = textFieldYear.value;
-  let genre = selectGenre.value;
+  let nombre = textFieldNombre.value;
+  let valor = textFieldValor.value;
+  let tipo = selectTipo.value;
+  let fecha = textFieldFecha.value;
   try {
-    let newPelicula = new Pelicula(title, genre, year);
-    listaPeliculas.agregar(newPelicula);
+    let newMovimiento = new Movimiento(nombre, tipo, fecha, valor);
+    listaMovimientos.agregar(newMovimiento);
   } catch (error) {
     const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
     snackbar.labelText = error.message;
     snackbar.open();
   } finally {
-    let peliculas = listaPeliculas.getPeliculas();
-    console.log(peliculas);
+    listarMovimientos();
+    console.log(movimientos);
   }
 })

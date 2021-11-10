@@ -23,6 +23,9 @@
 @use "@material/menu/mdc-menu";
 @use "@material/select/styles";
 @use "@material/snackbar/mdc-snackbar";
+@use "@material/layout-grid/mdc-layout-grid";
+
+@import "movimientos";
 
 @include card.core-styles;
 @include textfield.core-styles;
