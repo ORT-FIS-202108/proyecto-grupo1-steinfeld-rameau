@@ -65,6 +65,18 @@ body {
   background-color: #8559da;
 }
 
+.charts {
+  background-color: #ffffff;
+  
+  .mdc-tab__content .mdc-tab__text-label {
+    color: #00796b;
+  }
+
+  .mdc-tab__content .mdc-tab__icon {
+    color: #00796b;
+    }
+}
+
 .mdc-tab__content .mdc-tab__text-label {
   color: #ffffff;
 }
@@ -107,6 +119,11 @@ color: #ffffff;
   border-radius: 50%;
   color: #004c40;
   font-size: 15px;
+}
+
+.chart-container {
+  width: 400px;
+  height: 400px;
 }
 
 .footer {

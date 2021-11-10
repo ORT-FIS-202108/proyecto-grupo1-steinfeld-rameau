@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="bundle.css">
@@ -16,7 +15,7 @@
       </section>
     </div>
 
-    <div class="mdc-tab-bar" role="tablist">
+    <div id="main-tab" class="mdc-tab-bar" role="tablist">
       <div class="mdc-tab-scroller">
         <div class="mdc-tab-scroller__scroll-area">
           <div class="mdc-tab-scroller__scroll-content">
@@ -60,7 +59,7 @@
   </header>
 
   <main class="mdc-top-app-bar--fixed-adjust">
-    <section class="content">
+    <section name="main-tab-section" class="content">
       <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
           <h1>Movimientos</h1>
@@ -91,11 +90,54 @@
         </div>
       </div>
     </section>
-    <section class="content sample-content--hidden">
+    <section name="main-tab-section" class="content sample-content--hidden">
       <h1>Categorías</h1>
     </section>
-    <section class="content sample-content--hidden">
+    <section name="main-tab-section" class="content sample-content--hidden">
       <h1>Gráficas</h1>
+
+      <div id="chart-tab" class="mdc-tab-bar charts" role="tablist">
+        <div class="mdc-tab-scroller">
+          <div class="mdc-tab-scroller__scroll-area">
+            <div class="mdc-tab-scroller__scroll-content">
+              <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
+                  <span class="mdc-tab__text-label">Una</span>
+                </span>
+                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
+
+              <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
+                  <span class="mdc-tab__text-label">otra</span>
+                </span>
+                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <section name="chart-content" class="content">
+        <div class="chart-container">
+          <canvas id="chart" width="300px" height="300px"></canvas>
+        </div>
+      </section>
+
+      <section name="chart-content" class="content sample-content--hidden">
+        <div class="chart-container">
+          <canvas id="chart" width="300px" height="300px"></canvas>
+        </div>
+      </section>
+      
     </section>
   </main>
 
@@ -105,5 +147,4 @@
   </footer>
 </body>
 <script src="bundle.js" async></script>
-
 </html>
