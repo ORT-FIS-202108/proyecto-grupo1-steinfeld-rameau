@@ -13,6 +13,14 @@ export default class ListaCategorias {
     }
   }
 
+  eliminar(categoria) {
+    this.setCategorias(this.categorias.filter(c => c.nombre !== categoria.nombre));
+  }
+
+  setCategorias(categorias) {
+    this.categorias = categorias;
+  }
+
   getCategorias() {
     return this.categorias;
   }
