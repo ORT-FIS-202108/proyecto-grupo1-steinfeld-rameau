@@ -1,6 +1,6 @@
 @use "@material/theme" with (
-  $primary: #00bcd4,
-  $secondary: #f44336,
+  $primary: #512da8,
+  $secondary: #00796b,
   $background: #c7c7c7,
 );
 @use '@material/button/mdc-button';
@@ -26,58 +26,104 @@
 @use "@material/layout-grid/mdc-layout-grid";
 
 @import "movimientos";
+@import "categoria";
+
 
 @include card.core-styles;
 @include textfield.core-styles;
+@include icon-button.core-styles;
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px auto;
-}
 
-.app-bar {
-  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .mdc-top-app-bar {
-  z-index: 7;
-  @include icon-button.core-styles;
+  background-color: #512da8;
+  position: absolute;
 }
 
-section {
-  text-align: center;
+.mdc-top-app-bar__title {
+  size: 25px;
 }
+
+.img-topbar {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.mdc-top-app-bar--fixed-adjust {
+  height: 100%;
+}
+
+.mdc-tab-bar {
+  background-color: #8559da;
+}
+
+.mdc-tab__content .mdc-tab__text-label {
+  color: #ffffff;
+}
+
+.mdc-tab__content .mdc-tab__icon {
+color: #ffffff;
+}
+
+.mdc-tab-indicator .mdc-tab-indicator__content {
+  border: 2px solid #00796b
+}
+
 
 .content {
-  margin: 10rem auto;
+  margin: 5rem auto;
   padding-bottom: 20rem;
-  text-align: center;
 }
 
 .sample-content--hidden {
   display: none;
 }
 
-.mdc-tab {
-    background-color: #67daff;
+.mdc-list-item {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  font-size: 25px;
 }
 
-.mdc-tab__content .mdc-tab__text-label {
-    color: black;
+.icon-down {
+  color: #4caf50;
 }
 
-.mdc-text-field {
-    margin: 1rem auto;
+.icon-up {
+  color: #4caf50;
 }
 
-.button {
-  margin-top: 1rem;
+.mdc-icon-button {
+  border-radius: 50%;
+  color: #004c40;
+  font-size: 15px;
 }
 
-.mdc-snackbar__actions .mdc-button__label {
-  color: #67daff;
+.footer {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 50px;
+  background-color: #512da8;
+  color: #ffffff;
+}
+
+.footer-main {
+  margin-right: 30px;
+}
+
+.footer-secondary {
+  color: #ffffff;
+  opacity: 0.8;
 }

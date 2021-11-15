@@ -1,5 +1,4 @@
 import { MDCRipple } from '@material/ripple';
-import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
@@ -12,6 +11,8 @@ let movimientos = listaMovimientos.getMovimientos();
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
+
+import { agregarCategoria } from './categorias';
 
 const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
@@ -55,3 +56,11 @@ addButton.listen('click', () => {
     console.log(movimientos);
   }
 })
+
+// CATEGORIAS
+const agregarCategoriaBtn = new MDCRipple(document.getElementById('agregarCategoriaBtn'));
+const inputNombre = new MDCTextField(document.getElementById('nombre'));
+const selectTipo = new MDCSelect(document.querySelector('.mdc-select'));
+
+agregarCategoriaBtn.listen('click', () => agregarCategoria(inputNombre.value, selectTipo.value));
+
