@@ -21,7 +21,7 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
   });
 });
 
-//Movimientos
+// MOVIMIENTOS
 const textFieldNombre = new MDCTextField(document.getElementById('nombreMovimiento'));
 const textFieldValor = new MDCTextField(document.getElementById('valor'));
 const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
@@ -34,7 +34,7 @@ agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.val
 // CATEGORIAS
 const agregarCategoriaBtn = new MDCRipple(document.getElementById('agregarCategoriaBtn'));
 const inputNombre = new MDCTextField(document.getElementById('nombre'));
-const selectTipo = new MDCSelect(document.querySelector('.mdc-select'));
+const selectTipo = new MDCSelect(document.getElementById('seleccionar-tipo-categoria'));
 
 agregarCategoriaBtn.listen('click', () => agregarCategoria(inputNombre.value, selectTipo.value));
 
