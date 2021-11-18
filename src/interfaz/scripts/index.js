@@ -26,9 +26,10 @@ const textFieldNombre = new MDCTextField(document.getElementById('nombreMovimien
 const textFieldValor = new MDCTextField(document.getElementById('valor'));
 const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
 const seleccionarTipo = new MDCSelect(document.getElementById('select-tipo'));
+const categoriaSeleccionada = new MDCSelect(document.getElementById('seleccionar-categoria'));
 const agregarMovimientoBtn = new MDCRipple(document.getElementById('agregarMovimientoBtn'));
 
-agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, seleccionarTipo.value, textFieldValor.value, textFieldFecha.value));
+agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, categoriaSeleccionada.value, seleccionarTipo.value, textFieldValor.value, textFieldFecha.value));
 
 
 // CATEGORIAS
