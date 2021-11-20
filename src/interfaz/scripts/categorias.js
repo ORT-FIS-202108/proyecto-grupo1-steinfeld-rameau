@@ -3,11 +3,10 @@ import { MDCSnackbar } from '@material/snackbar';
 import ListaCategorias from '../../dominio/lista-categorias.mjs';
 import Categoria from '../../dominio/categoria.mjs';
 
-const listaCategorias = new ListaCategorias();
+export const listaCategorias = new ListaCategorias();
 
 const listarCategorias = () => {
     const categorias = listaCategorias.getCategorias();
-    
     const lista = document.getElementById('listar-categorias');
     lista.innerHTML = '';
   

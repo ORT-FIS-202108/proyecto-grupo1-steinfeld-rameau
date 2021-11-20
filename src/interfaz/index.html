@@ -136,11 +136,11 @@
                                   role="option">
                                   <span class="mdc-list-item__ripple"></span>
                               </li>
-                              <li class="mdc-list-item" aria-selected="false" data-value="Ingreso" role="option">
+                              <li class="mdc-list-item" aria-selected="false" data-value="ingreso" role="option">
                                   <span class="mdc-list-item__ripple"></span>
                                   <span class="mdc-list-item__text">Ingreso</span>
                               </li>
-                              <li class="mdc-list-item" aria-selected="false" data-value="Egreso" role="option">
+                              <li class="mdc-list-item" aria-selected="false" data-value="egreso" role="option">
                                   <span class="mdc-list-item__ripple"></span>
                                   <span class="mdc-list-item__text">Egreso</span>
                               </li>
@@ -165,8 +165,7 @@
               <div class="mdc-tab-scroller__scroll-content">
                 <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                   <span class="mdc-tab__content">
-                    <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
-                    <span class="mdc-tab__text-label">Una</span>
+                    <span class="mdc-tab__text-label">Balance</span>
                   </span>
                   <span class="mdc-tab-indicator mdc-tab-indicator--active">
                     <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -176,8 +175,7 @@
   
                 <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                   <span class="mdc-tab__content">
-                    <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
-                    <span class="mdc-tab__text-label">otra</span>
+                    <span class="mdc-tab__text-label">Por categorías</span>
                   </span>
                   <span class="mdc-tab-indicator mdc-tab-indicator--active">
                     <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -190,14 +188,23 @@
         </div>
         
         <section name="chart-content" class="content">
-          <div class="chart-container">
-            <canvas id="chart" width="300px" height="300px"></canvas>
+          <div class="chart-main-container">
+            <div class="chart-container">
+              <canvas id="balance-chart" width="300px" height="300px"></canvas>
+            </div>
           </div>
         </section>
   
         <section name="chart-content" class="content sample-content--hidden">
-          <div class="chart-container">
-            <canvas id="chart" width="300px" height="300px"></canvas>
+          <div class="chart-main-container">
+            <div class="chart-container">
+              Ingresos
+              <canvas id="categorias-chart-ingresos" width="300px" height="300px"></canvas>
+            </div>
+            <div class="chart-container">
+              Egresos
+              <canvas id="categorias-chart-egresos" width="300px" height="300px"></canvas>
+            </div>
           </div>
         </section>
         

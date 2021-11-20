@@ -94,7 +94,6 @@ color: #ffffff;
 
 .content {
   margin: 5rem auto;
-  padding-bottom: 20rem;
 }
 
 .sample-content--hidden {
@@ -122,9 +121,14 @@ color: #ffffff;
   font-size: 15px;
 }
 
-.chart-container {
-  width: 400px;
-  height: 400px;
+.chart-main-container {
+  display: flex;
+  justify-content: space-around;
+  
+  .chart-container {
+    width: 310px;
+    height: 310px;
+  }
 }
 
 .footer {
