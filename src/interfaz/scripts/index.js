@@ -31,7 +31,6 @@ const agregarMovimientoBtn = new MDCRipple(document.getElementById('agregarMovim
 
 agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, categoriaSeleccionada.value, seleccionarTipo.value, textFieldFecha.value, textFieldValor.value));
 
-
 // CATEGORIAS
 const agregarCategoriaBtn = new MDCRipple(document.getElementById('agregarCategoriaBtn'));
 const inputNombre = new MDCTextField(document.getElementById('nombre'));

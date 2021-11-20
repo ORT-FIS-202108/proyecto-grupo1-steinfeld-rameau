@@ -8,7 +8,7 @@ export default class ListaMovimientos {
     this.movimientos.push(movimiento);
   }
   eliminar(movimiento) {
-    this.setMovimientos(this.movimientos.filter(c => c.nombreMovimiento !== categoria.nombreMovimiento));
+    this.setMovimientos(this.movimientos.filter(m => m.id !== movimiento.id));
   }
 
   setMovimientos(movimientos) {

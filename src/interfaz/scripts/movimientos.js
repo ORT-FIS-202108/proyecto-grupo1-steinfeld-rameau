@@ -8,6 +8,7 @@ const listaMovimientos = new ListaMovimientos();
 const movimientos = listaMovimientos.getMovimientos();
 
 export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
+
     let id = movimientos.length;
     try {
         let newMovimiento = new Movimiento(nombre, categoria, tipo, fecha, valor, id);
@@ -68,15 +69,17 @@ const listarMovimientos = () => {
         }
         if (document.getElementById(month)) {
             const listaAppendiar = document.getElementById("lista-" + month);
-            const deleteButton = document.createElement('button');
-            deleteButton.className = "movimientos--lista__botones__eliminar";
+            const botonEliminar = document.createElement('button');
+            botonEliminar.onclick = () => eliminar(movimiento);
+            botonEliminar.id = movimiento.id;
+            botonEliminar.className = "movimientos--lista__botones__eliminar";
 
             const editButton = document.createElement('button');
             editButton.className = "movimientos--lista__botones__editar";
 
             const buttonsContainer = document.createElement('div');
             buttonsContainer.className = "movimientos--lista__botones";
-            buttonsContainer.appendChild(deleteButton);
+            buttonsContainer.appendChild(botonEliminar);
             buttonsContainer.appendChild(editButton);
 
             const listItem = document.createElement('li');
@@ -90,15 +93,17 @@ const listarMovimientos = () => {
             collapseButton.id = month;
             collapseButton.className = "collapsible";
 
-            const deleteButton = document.createElement('button');
-            deleteButton.className = "movimientos--lista__botones__eliminar";
+            const botonEliminar = document.createElement('button');
+            botonEliminar.onclick = () => eliminar(movimiento);
+            botonEliminar.id = movimiento.id;
+            botonEliminar.className = "movimientos--lista__botones__eliminar";
 
             const editButton = document.createElement('button');
             editButton.className = "movimientos--lista__botones__editar";
 
             const buttonsContainer = document.createElement('div');
             buttonsContainer.className = "movimientos--lista__botones";
-            buttonsContainer.appendChild(deleteButton);
+            buttonsContainer.appendChild(botonEliminar);
             buttonsContainer.appendChild(editButton);
 
             const listItem = document.createElement('li');
@@ -133,4 +138,8 @@ const listarMovimientos = () => {
             }
         });
     }
+}
+const eliminar = (movimiento) => {
+    listaMovimientos.eliminar(movimiento);
+    listarMovimientos();
 }
