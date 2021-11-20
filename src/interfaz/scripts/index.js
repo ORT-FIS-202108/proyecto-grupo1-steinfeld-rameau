@@ -4,7 +4,17 @@ import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
 import { agregarCategoria } from './categorias';
-import { crearGraficoBalance, crearGraficoCategorias } from './graficas';
+import { crearGraficoBalance, crearGraficoCategorias, destruirGraficos, graficoBalance } from './graficas';
+
+// CATEGORIAS
+
+const agregarCategoriaBtn = new MDCRipple(document.getElementById('agregarCategoriaBtn'));
+const inputNombre = new MDCTextField(document.getElementById('nombre'));
+const selectTipo = new MDCSelect(document.querySelector('.mdc-select'));
+
+agregarCategoriaBtn.listen('click', () => agregarCategoria(inputNombre.value, selectTipo.value));
+
+// TAB BAR
 
 const tabBar = new MDCTabBar(document.getElementById('main-tab'));
 tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
@@ -14,57 +24,16 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
     } else {
       element.classList.add("sample-content--hidden");
     }
-  });
-});
 
-// CATEGORIAS
+    if (index === 2) {
+      const balanceCtx = document.getElementById('balance-chart').getContext('2d');
+      crearGraficoBalance(balanceCtx);
 
-
-const agregarCategoriaBtn = new MDCRipple(document.getElementById('agregarCategoriaBtn'));
-const inputNombre = new MDCTextField(document.getElementById('nombre'));
-const selectTipo = new MDCSelect(document.querySelector('.mdc-select'));
-
-agregarCategoriaBtn.listen('click', () => agregarCategoria(inputNombre.value, selectTipo.value));
-
-
-// GRAFICOS
-let balanceCtx = document.getElementById('balance-chart').getContext('2d');
-crearGraficoBalance(balanceCtx);
-
-let categoriasIngresosCtx;
-
-const ingresosChartTabBar = new MDCTabBar(document.getElementById("chart-tab"));
-ingresosChartTabBar.listen("MDCTabBar:activated", (activatedEvent) => {
-  document.getElementsByName("chart-content").forEach((element, index) => {
-    if (index === activatedEvent.detail.index) {
-      element.classList.remove("sample-content--hidden");
-    } else {
-      element.classList.add("sample-content--hidden");
-    }
-
-    if (index === 1 && !categoriasIngresosCtx) {
-      categoriasIngresosCtx = document.getElementById('categorias-chart-ingresos').getContext('2d');
+      const categoriasIngresosCtx = document.getElementById('categorias-chart-ingresos').getContext('2d');
       crearGraficoCategorias(categoriasIngresosCtx, 'ingreso');
-    }
-
-  });
-});
-
-let categoriasEgresosCtx;
-
-const egresosChartTabBar = new MDCTabBar(document.getElementById("chart-tab"));
-egresosChartTabBar.listen("MDCTabBar:activated", (activatedEvent) => {
-  document.getElementsByName("chart-content").forEach((element, index) => {
-    if (index === activatedEvent.detail.index) {
-      element.classList.remove("sample-content--hidden");
-    } else {
-      element.classList.add("sample-content--hidden");
-    }
-
-    if (index === 1 && !categoriasEgresosCtx) {
-      categoriasEgresosCtx = document.getElementById('categorias-chart-egresos').getContext('2d');
+      
+      const categoriasEgresosCtx = document.getElementById('categorias-chart-egresos').getContext('2d');
       crearGraficoCategorias(categoriasEgresosCtx, 'egreso');
     }
-
   });
 });
