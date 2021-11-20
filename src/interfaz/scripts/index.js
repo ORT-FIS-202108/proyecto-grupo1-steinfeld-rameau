@@ -23,13 +23,13 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
 
 // MOVIMIENTOS
 const textFieldNombre = new MDCTextField(document.getElementById('nombreMovimiento'));
-const textFieldValor = new MDCTextField(document.getElementById('valor'));
-const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
-const seleccionarTipo = new MDCSelect(document.getElementById('select-tipo'));
 const categoriaSeleccionada = new MDCSelect(document.getElementById('seleccionar-categoria'));
+const seleccionarTipo = new MDCSelect(document.getElementById('select-tipo'));
+const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
+const textFieldValor = new MDCTextField(document.getElementById('valor'));
 const agregarMovimientoBtn = new MDCRipple(document.getElementById('agregarMovimientoBtn'));
 
-agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, categoriaSeleccionada.value, seleccionarTipo.value, textFieldValor.value, textFieldFecha.value));
+agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, categoriaSeleccionada.value, seleccionarTipo.value, textFieldFecha.value, textFieldValor.value));
 
 
 // CATEGORIAS
@@ -38,4 +38,5 @@ const inputNombre = new MDCTextField(document.getElementById('nombre'));
 const selectTipo = new MDCSelect(document.getElementById('seleccionar-tipo-categoria'));
 
 agregarCategoriaBtn.listen('click', () => agregarCategoria(inputNombre.value, selectTipo.value));
+
 

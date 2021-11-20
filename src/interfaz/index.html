@@ -68,116 +68,7 @@
               <h1>Movimientos</h1>
           </div>
           <div class="mdc-layout-grid__inner">
-              <div class="mdc-layout-grid__cell--span-6">
-                  <ul class="mdc-list movimientos__columna--lista" id="listar-movimientos">
-                      <li class="mdc-list-item" tabindex="0">
-                          <span class="mdc-list-item__ripple"></span>
-                          <div>
-                              <span class="material-icons icon-up">arrow_drop_up</span>
-                              <span class="mdc-list-item__text">Enero</span>
-                          </div>
-                          <div>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  edit
-                              </button>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  delete
-                              </button>
-                          </div>
-                      </li>
-                      <li class="mdc-list-item" tabindex="1">
-                          <span class="mdc-list-item__ripple"></span>
-                          <div>
-                              <span class="material-icons icon-up">arrow_drop_up</span>
-                              <span class="mdc-list-item__text">Febrero</span>
-                          </div>
-                          <div>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  edit
-                              </button>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  delete
-                              </button>
-                          </div>
-                      </li>
-
-                      <li class="mdc-list-item" tabindex="2">
-                          <span class="mdc-list-item__ripple"></span>
-                          <div>
-                              <span class="material-icons icon-up">arrow_drop_up</span>
-                              <span class="mdc-list-item__text">Marzo</span>
-                          </div>
-                          <div>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  edit
-                              </button>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  delete
-                              </button>
-                          </div>
-                      </li>
-
-                      <li class="mdc-list-item" tabindex="3">
-                          <span class="mdc-list-item__ripple"></span>
-                          <div>
-                              <span class="material-icons icon-up">arrow_drop_up</span>
-                              <span class="mdc-list-item__text">Abril</span>
-                          </div>
-                          <div>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  edit
-                              </button>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  delete
-                              </button>
-                          </div>
-                      </li>
-
-                      <li class="mdc-list-item" tabindex="4">
-                          <span class="mdc-list-item__ripple"></span>
-                          <div>
-                              <span class="material-icons icon-up">arrow_drop_up</span>
-                              <span class="mdc-list-item__text">Mayo</span>
-                          </div>
-                          <div>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  edit
-                              </button>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  delete
-                              </button>
-                          </div>
-                      </li>
-
-                      <li class="mdc-list-item" tabindex="5">
-                          <span class="mdc-list-item__ripple"></span>
-                          <div>
-                              <span class="material-icons icon-up">arrow_drop_up</span>
-                              <span class="mdc-list-item__text">Junio</span>
-                          </div>
-                          <div>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  edit
-                              </button>
-                              <button class="mdc-icon-button material-icons">
-                                  <div class="mdc-icon-button__ripple"></div>
-                                  delete
-                              </button>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
+              <div id="listar-movimientos" class="mdc-layout-grid__cell--span-6"></div>
               <div class="mdc-layout-grid__cell--span-6 movimientos--form">
                   <h2>Añadir nuevo movimiento</h2>
 
@@ -215,7 +106,7 @@
                   </label>
 
                   <div id="seleccionar-categoria" class="mdc-select mdc-select--outlined">
-                      <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
+                      <div class="mdc-select__anchor" aria-labelledby="seleccionar-categoria">
                           <span class="mdc-notched-outline">
                             <span class="mdc-notched-outline__leading"></span>
                             <span class="mdc-notched-outline__notch">
@@ -239,9 +130,8 @@
                       </div>
 
                       <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                          <ul id="seleccionar-categoria-select" class="mdc-list" role="listbox" aria-label="Genre picker listbox">
-                              <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value=""
-                                  role="option">
+                          <ul id="seleccionar-categoria-select" class="mdc-list" role="listbox" aria-label="Seleccionar Categoria">
+                              <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
                                   <span class="mdc-list-item__ripple"></span>
                               </li>
                           </ul>
@@ -273,7 +163,7 @@
                       </div>
 
                       <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                          <ul class="mdc-list" role="listbox" aria-label="Genre picker listbox">
+                          <ul class="mdc-list" role="listbox" aria-label="Seleccionar Tipo Movimiento">
                               <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
                                   <span class="mdc-list-item__ripple"></span>
                               </li>
