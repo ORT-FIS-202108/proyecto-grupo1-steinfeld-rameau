@@ -3,6 +3,7 @@ import Categoria from '../../dominio/categoria.mjs';
 import ListaMovimientos from "../../dominio/lista-movimientos.mjs";
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
+import { MDCRipple } from '@material/ripple';
 
 import {MDCSnackbar} from "@material/snackbar";
 
@@ -13,6 +14,7 @@ const categoriaMovimiento = new MDCSelect(document.getElementById('seleccionar-c
 const tipoMovimiento = new MDCSelect(document.getElementById('select-tipo'));
 const fechaMovimiento = new MDCTextField(document.getElementById('fecha'));
 const valorMovimiento = new MDCTextField(document.getElementById('valor'));
+const editarBoton = new MDCRipple(document.getElementById('editarMovimientoBtn'));
 
 export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
     const movimientos = listaMovimientos.getMovimientos();
@@ -163,9 +165,30 @@ const eliminarMovimiento = (movimiento) => {
 }
 
 const editar = (movimiento) => {
+    //cargo formulario
     nombreMovimiento.value = movimiento.nombre;
     categoriaMovimiento.value = movimiento.categoria;
     tipoMovimiento.value = movimiento.tipo;
     fechaMovimiento.value = movimiento.fecha;
     valorMovimiento.value = parseInt(movimiento.valor);
+
+    //cambio titulo
+    const tituloFormulario = document.getElementById('subtituloMovimiento');
+    tituloFormulario.textContent = 'Editar Movimiento';
+
+    //cambio boton
+    document.getElementById('editarMovimientoBtn').classList.add("visible");
+    document.getElementById('agregarMovimientoBtn').classList.remove("visible");
+
+    editarBoton.addEventListener("click", function() {
+        //cambio titulo
+        const tituloFormulario = document.getElementById('subtituloMovimiento');
+        tituloFormulario.textContent = 'Añadir nuevo movimiento';
+
+        //busco el elemento a cambiar y edito con la nueva info
+
+        //cambio boton
+        document.getElementById('editarMovimientoBtn').classList.remove("visible");
+        document.getElementById('agregarMovimientoBtn').classList.add("visible");
+    });
 }

@@ -37,4 +37,10 @@
       margin-bottom: 10px;
     }
   }
+  &--boton {
+    display: none;
+    &.visible {
+      display: block;
+    }
+  }
 }

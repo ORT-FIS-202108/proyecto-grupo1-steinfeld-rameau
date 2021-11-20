@@ -69,8 +69,8 @@
           </div>
           <div class="mdc-layout-grid__inner">
               <div id="listar-movimientos" class="mdc-layout-grid__cell--span-6"></div>
-              <div class="mdc-layout-grid__cell--span-6 movimientos--form">
-                  <h2>Añadir nuevo movimiento</h2>
+              <div class="mdc-layout-grid__cell--span-6 movimientos--form formulario">
+                  <h2 id="subtituloMovimiento">Añadir nuevo movimiento</h2>
 
                   <label class="mdc-text-field mdc-text-field--outlined" id="nombreMovimiento">
                         <span class="mdc-notched-outline">
@@ -180,8 +180,11 @@
                   </div>
 
                   <div class="button">
-                      <button class="mdc-button mdc-button--raised" id="agregarMovimientoBtn">
+                      <button id="agregarMovimientoBtn" class="mdc-button mdc-button--raised movimientos--boton visible">
                           <span class="mdc-button__label">AGREGAR</span>
+                      </button>
+                      <button id="editarMovimientoBtn" class="mdc-button mdc-button--raised movimientos--boton">
+                          <span class="mdc-button__label">EDITAR</span>
                       </button>
                   </div>
               </div>
