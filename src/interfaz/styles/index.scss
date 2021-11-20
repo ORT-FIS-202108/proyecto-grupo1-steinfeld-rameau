@@ -43,6 +43,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .mdc-top-app-bar {
@@ -57,10 +58,6 @@ body {
 .img-topbar {
   width: 2.5rem;
   height: 2.5rem;
-}
-
-.mdc-top-app-bar--fixed-adjust {
-  height: 100%;
 }
 
 .mdc-tab-bar {
