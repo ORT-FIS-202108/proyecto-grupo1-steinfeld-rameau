@@ -124,10 +124,12 @@ color: #ffffff;
 .chart-main-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   
   .chart-container {
     width: 310px;
     height: 310px;
+    margin: 15px;
   }
 }
 

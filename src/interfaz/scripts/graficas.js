@@ -1,4 +1,4 @@
-import { Chart, registerables } from 'chart.js';
+import { Chart, registerables, plugins } from 'chart.js';
 Chart.register(...registerables);
 
 import { listaCategorias } from './categorias';
@@ -15,6 +15,14 @@ const movimientosMock = [
 let graficoBalance = null;
 let graficoEgresos = null;
 let graficoIngresos = null;
+
+const verificarMesYAnio = (m, anio, mes) => {
+  const fechaMovimiento = new Date(m.fecha);
+  const mesMovimiento = fechaMovimiento.getMonth();
+  const anioMovimiento = fechaMovimiento.getFullYear();
+
+  return mesMovimiento === mes && anioMovimiento === anio;
+}
 
 const getCategoriasData = (tipo) => {
   const categoriasTotales = listaCategorias.getCategorias().filter(categoria => categoria.tipo === tipo);
@@ -66,7 +74,8 @@ const getCategoriasData = (tipo) => {
           label: tipo,
           backgroundColor
         }
-      ]}
+      ]
+    }
 }
 
 export const crearGraficoCategorias = (ctx, tipo) => {
@@ -94,22 +103,13 @@ const getBalanceData = () => {
   fechaInicio.setMonth(fechaInicio.getMonth() - 12);
 
   for(let i = 0; i <= 12; i++) {
-    debugger
     const anio = fechaInicio.getFullYear();
     const mes = fechaInicio.getMonth();
     
     labels.push(MONTHS[mes]);
     fechaInicio.setMonth(mes + 1);
 
-    const check = (m, anio, mes) => {
-      const fechaMovimiento = new Date(m.fecha);
-      const mesMovimiento = fechaMovimiento.getMonth();
-      const anioMovimiento = fechaMovimiento.getFullYear();
-
-      return mesMovimiento === mes && anioMovimiento === anio;
-    }
-
-    const movimientosDelMes = movimientosMock.filter(m => check(m, anio, mes));
+    const movimientosDelMes = movimientosMock.filter(m => verificarMesYAnio(m, anio, mes));
     
     let valor = 0;
     movimientosDelMes.forEach(mm => {
@@ -120,7 +120,6 @@ const getBalanceData = () => {
   
     const color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
     backgroundColor.push(color);
-    
   }
   
   return {
