@@ -1,24 +1,30 @@
 import Movimiento from "../../dominio/movimiento.mjs";
 import Categoria from '../../dominio/categoria.mjs';
 import ListaMovimientos from "../../dominio/lista-movimientos.mjs";
-import { MDCTextField } from '@material/textfield';
-import { MDCSelect } from '@material/select';
-import { MDCRipple } from '@material/ripple';
 
 import {MDCSnackbar} from "@material/snackbar";
-
-const listaMovimientos = new ListaMovimientos();
+import { MDCTextField } from '@material/textfield';
+import { MDCSelect } from '@material/select';
 
 const nombreMovimiento = new MDCTextField(document.getElementById('nombreMovimiento'));
 const categoriaMovimiento = new MDCSelect(document.getElementById('seleccionar-categoria'));
 const tipoMovimiento = new MDCSelect(document.getElementById('select-tipo'));
 const fechaMovimiento = new MDCTextField(document.getElementById('fecha'));
 const valorMovimiento = new MDCTextField(document.getElementById('valor'));
-const editarBoton = new MDCRipple(document.getElementById('editarMovimientoBtn'));
+const listaMovimientos = new ListaMovimientos();
+
+const limpiarFormularioMovimiento = () => {
+    nombreMovimiento.value = '';
+    categoriaMovimiento.value = '';
+    tipoMovimiento.value = '';
+    fechaMovimiento.value = '';
+    valorMovimiento.value = '';
+}
 
 export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
     const movimientos = listaMovimientos.getMovimientos();
     let id = 'movimiento-' + movimientos.length;
+    limpiarFormularioMovimiento();
 
     try {
         let newMovimiento = new Movimiento(nombre, categoria, tipo, fecha, valor, id);
@@ -39,11 +45,7 @@ const listarMovimientos = () => {
     const lista = document.getElementById('listar-movimientos');
     lista.innerHTML = '';
 
-    nombreMovimiento.value = '';
-    categoriaMovimiento.value = '';
-    tipoMovimiento.value = '';
-    fechaMovimiento.value = '';
-    valorMovimiento.value = '';
+
     movimientos.forEach(movimiento => {
         let [year, month, day] = movimiento.fecha.split('-');
 
@@ -180,13 +182,20 @@ const editar = (movimiento) => {
     document.getElementById('editarMovimientoBtn').classList.add("visible");
     document.getElementById('agregarMovimientoBtn').classList.remove("visible");
 
-    editarBoton.addEventListener("click", function() {
+    document.getElementById('editarMovimientoBtn').addEventListener("click", function() {
         //cambio titulo
         const tituloFormulario = document.getElementById('subtituloMovimiento');
         tituloFormulario.textContent = 'Añadir nuevo movimiento';
 
-        //busco el elemento a cambiar y edito con la nueva info
+        //edito instancia de movimiento con la nueva data
+        movimiento.nombre = nombreMovimiento.value;
+        movimiento.categoria = categoriaMovimiento.value;
+        movimiento.tipo = tipoMovimiento.value;
+        movimiento.fecha = fechaMovimiento.value;
+        movimiento.valor = valorMovimiento.value;
 
+        listarMovimientos();
+        limpiarFormularioMovimiento();
         //cambio boton
         document.getElementById('editarMovimientoBtn').classList.remove("visible");
         document.getElementById('agregarMovimientoBtn').classList.add("visible");
