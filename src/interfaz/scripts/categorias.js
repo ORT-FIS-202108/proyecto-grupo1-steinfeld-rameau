@@ -4,9 +4,9 @@ import ListaCategorias from '../../dominio/lista-categorias.mjs';
 import Categoria from '../../dominio/categoria.mjs';
 
 const listaCategorias = new ListaCategorias();
-const categorias = listaCategorias.getCategorias();
 
 const listarCategorias = () => {
+    const categorias = listaCategorias.getCategorias();
     
     const lista = document.getElementById('listar-categorias');
     lista.innerHTML = '';
@@ -32,6 +32,7 @@ const listarCategorias = () => {
   }
 
 export const agregarCategoria = (nombre, tipo) => {
+    const categorias = listaCategorias.getCategorias();
         let id = categorias.length;
         try {
           let newCategoria = new Categoria(nombre, tipo, id);

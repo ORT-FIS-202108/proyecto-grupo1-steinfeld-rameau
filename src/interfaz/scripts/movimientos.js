@@ -1,13 +1,21 @@
 import Movimiento from "../../dominio/movimiento.mjs";
 import Categoria from '../../dominio/categoria.mjs';
 import ListaMovimientos from "../../dominio/lista-movimientos.mjs";
+import { MDCTextField } from '@material/textfield';
+import { MDCSelect } from '@material/select';
 
 import {MDCSnackbar} from "@material/snackbar";
 
 const listaMovimientos = new ListaMovimientos();
-const movimientos = listaMovimientos.getMovimientos();
+
+const nombreMovimiento = new MDCTextField(document.getElementById('nombreMovimiento'));
+const categoriaMovimiento = new MDCSelect(document.getElementById('seleccionar-categoria'));
+const tipoMovimiento = new MDCSelect(document.getElementById('select-tipo'));
+const fechaMovimiento = new MDCTextField(document.getElementById('fecha'));
+const valorMovimiento = new MDCTextField(document.getElementById('valor'));
 
 export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
+    const movimientos = listaMovimientos.getMovimientos();
     let id = 'movimiento-' + movimientos.length;
 
     try {
@@ -25,8 +33,15 @@ export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
 
 
 const listarMovimientos = () => {
+    const movimientos = listaMovimientos.getMovimientos();
     const lista = document.getElementById('listar-movimientos');
     lista.innerHTML = '';
+
+    nombreMovimiento.value = '';
+    categoriaMovimiento.value = '';
+    tipoMovimiento.value = '';
+    fechaMovimiento.value = '';
+    valorMovimiento.value = '';
     movimientos.forEach(movimiento => {
         let [year, month, day] = movimiento.fecha.split('-');
 
@@ -75,6 +90,7 @@ const listarMovimientos = () => {
             botonEliminar.className = "movimientos--lista__botones__eliminar";
 
             const editButton = document.createElement('button');
+            editButton.onclick = () => editar(movimiento);
             editButton.className = "movimientos--lista__botones__editar";
 
             const buttonsContainer = document.createElement('div');
@@ -99,6 +115,7 @@ const listarMovimientos = () => {
             botonEliminar.className = "movimientos--lista__botones__eliminar";
 
             const editButton = document.createElement('button');
+            editButton.onclick = () => editar(movimiento);
             editButton.className = "movimientos--lista__botones__editar";
 
             const buttonsContainer = document.createElement('div');
@@ -145,6 +162,10 @@ const eliminarMovimiento = (movimiento) => {
     listarMovimientos();
 }
 
-const editar = () => {
-
+const editar = (movimiento) => {
+    nombreMovimiento.value = movimiento.nombre;
+    categoriaMovimiento.value = movimiento.categoria;
+    tipoMovimiento.value = movimiento.tipo;
+    fechaMovimiento.value = movimiento.fecha;
+    valorMovimiento.value = parseInt(movimiento.valor);
 }
