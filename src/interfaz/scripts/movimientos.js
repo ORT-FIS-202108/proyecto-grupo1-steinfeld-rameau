@@ -8,8 +8,8 @@ const listaMovimientos = new ListaMovimientos();
 const movimientos = listaMovimientos.getMovimientos();
 
 export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
+    let id = 'movimiento-' + movimientos.length;
 
-    let id = movimientos.length;
     try {
         let newMovimiento = new Movimiento(nombre, categoria, tipo, fecha, valor, id);
         listaMovimientos.agregar(newMovimiento);
@@ -70,7 +70,7 @@ const listarMovimientos = () => {
         if (document.getElementById(month)) {
             const listaAppendiar = document.getElementById("lista-" + month);
             const botonEliminar = document.createElement('button');
-            botonEliminar.onclick = () => eliminar(movimiento);
+            botonEliminar.onclick = () => eliminarMovimiento(movimiento);
             botonEliminar.id = movimiento.id;
             botonEliminar.className = "movimientos--lista__botones__eliminar";
 
@@ -94,7 +94,7 @@ const listarMovimientos = () => {
             collapseButton.className = "collapsible";
 
             const botonEliminar = document.createElement('button');
-            botonEliminar.onclick = () => eliminar(movimiento);
+            botonEliminar.onclick = () => eliminarMovimiento(movimiento);
             botonEliminar.id = movimiento.id;
             botonEliminar.className = "movimientos--lista__botones__eliminar";
 
@@ -139,7 +139,12 @@ const listarMovimientos = () => {
         });
     }
 }
-const eliminar = (movimiento) => {
+
+const eliminarMovimiento = (movimiento) => {
     listaMovimientos.eliminar(movimiento);
     listarMovimientos();
+}
+
+const editar = () => {
+
 }
