@@ -6,10 +6,9 @@ import ListaCategorias from '../../dominio/lista-categorias.mjs';
 import {MDCSnackbar} from "@material/snackbar";
 
 const listaMovimientos = new ListaMovimientos();
-const listaCategorias = new ListaCategorias();
 
 export const agregarMovimiento = (nombre, tipo, valor, fecha) => {
-    const movimientos = listaMovimientos.getCategorias();
+    const movimientos = listaMovimientos.getMovimientos();
     try {
         let newMovimiento = new Movimiento(nombre, tipo, fecha, valor);
         listaMovimientos.agregar(newMovimiento);
@@ -21,18 +20,6 @@ export const agregarMovimiento = (nombre, tipo, valor, fecha) => {
         listarMovimientos();
         console.log(movimientos);
     }
-}
-
-const seleccionarCategoria = () => {
-    const categorias = listaCategorias.getCategorias();
-
-    const selectCat = document.getElementById('seleccionar-categoria-select');
-    selectCat.innerHTML = '';
-
-    categorias.forEach(categoria => {
-        let newSelectElement = '<li class="mdc-list-item" aria-selected="false" data-value="' + categoria.nombre + '" role="option">' + '<span class="mdc-list-item__ripple"></span>' + '<span class="mdc-list-item__text">' + categoria.nombre + '</span>' + '</li>';
-        document.getElementById('seleccionar-categoria-select').innerHTML += newSelectElement;
-    });
 }
 
 /*

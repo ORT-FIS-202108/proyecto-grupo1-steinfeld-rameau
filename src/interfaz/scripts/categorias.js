@@ -10,6 +10,9 @@ const listarCategorias = () => {
     
     const lista = document.getElementById('listar-categorias');
     lista.innerHTML = '';
+
+    const selectCat = document.getElementById('seleccionar-categoria-select');
+    selectCat.innerHTML = '';
   
     categorias.forEach(categoria => {
       const deleteButton = document.createElement('button');
@@ -22,6 +25,10 @@ const listarCategorias = () => {
       listItem.appendChild(deleteButton);
   
       lista.appendChild(listItem);
+
+      //select en movimientos
+        let newSelectElement = '<li class="mdc-list-item" aria-selected="false" data-value="' + categoria.nombre + '" role="option">' + '<span class="mdc-list-item__ripple"></span>' + '<span class="mdc-list-item__text">' + categoria.nombre + '</span>' + '</li>';
+        document.getElementById('seleccionar-categoria-select').innerHTML += newSelectElement;
     })
   }
 
