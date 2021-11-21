@@ -4,20 +4,27 @@ import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
-const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-const topAppBar = new MDCTopAppBar(topAppBarElement);
-
+import {agregarMovimiento} from "./movimientos";
 import { agregarCategoria } from './categorias';
-import { agregarMovimiento } from "./movimientos";
+import { crearGraficoBalance, crearGraficoCategorias } from './graficas';
 import { exportarExcel } from "./exportarDatos";
 
-const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
+// TAB BAR
+const tabBar = new MDCTabBar(document.getElementById('main-tab'));
 tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
-  document.querySelectorAll(".content").forEach((element, index) => {
+  document.getElementsByName('main-tab-section').forEach((element, index) => {
     if (index === activatedEvent.detail.index) {
       element.classList.remove("sample-content--hidden");
     } else {
       element.classList.add("sample-content--hidden");
+    }
+
+    if (index === 2) {
+      const balanceCtx = document.getElementById('balance-chart').getContext('2d');
+      crearGraficoBalance(balanceCtx);
+      
+      const categoriasEgresosCtx = document.getElementById('categorias-chart-egresos').getContext('2d');
+      crearGraficoCategorias(categoriasEgresosCtx);
     }
   });
 });
@@ -36,10 +43,9 @@ exportarDatosBtn.listen('click', () => exportarExcel('tblData', 'datos-movimient
 agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, categoriaSeleccionada.value, seleccionarTipo.value, textFieldFecha.value, textFieldValor.value));
 
 // CATEGORIAS
+
 const agregarCategoriaBtn = new MDCRipple(document.getElementById('agregarCategoriaBtn'));
 const inputNombre = new MDCTextField(document.getElementById('nombre'));
 const selectTipo = new MDCSelect(document.getElementById('seleccionar-tipo-categoria'));
 
 agregarCategoriaBtn.listen('click', () => agregarCategoria(inputNombre.value, selectTipo.value));
-
-

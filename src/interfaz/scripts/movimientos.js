@@ -11,7 +11,8 @@ const categoriaMovimiento = new MDCSelect(document.getElementById('seleccionar-c
 const tipoMovimiento = new MDCSelect(document.getElementById('select-tipo'));
 const fechaMovimiento = new MDCTextField(document.getElementById('fecha'));
 const valorMovimiento = new MDCTextField(document.getElementById('valor'));
-const listaMovimientos = new ListaMovimientos();
+
+export const listaMovimientos = new ListaMovimientos();
 
 const limpiarFormularioMovimiento = () => {
     nombreMovimiento.value = '';
