@@ -1,4 +1,4 @@
-function exportTableToExcel(tableID, filename = ''){
+export const exportarExcel = (tableID, filename = '') => {
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';
     var tableSelect = document.getElementById(tableID);
@@ -7,7 +7,7 @@ function exportTableToExcel(tableID, filename = ''){
     // Especificar nombre del archivo
     filename = filename?filename+'.xls':'excel_data.xls';
 
-    // Crear link de descarga
+    // Seleccionar boton de descarga
     downloadLink = document.createElement("a");
 
     document.body.appendChild(downloadLink);
