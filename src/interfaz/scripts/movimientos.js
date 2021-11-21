@@ -1,6 +1,5 @@
-import Movimiento from "../../dominio/movimiento.mjs";
-import Categoria from '../../dominio/categoria.mjs';
-import ListaMovimientos from "../../dominio/lista-movimientos.mjs";
+import Movimiento from "../../dominio/movimientos/movimiento.mjs";
+import ListaMovimientos from "../../dominio/movimientos/lista-movimientos.mjs";
 
 import {MDCSnackbar} from "@material/snackbar";
 import { MDCTextField } from '@material/textfield';
