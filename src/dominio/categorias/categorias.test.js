@@ -30,8 +30,8 @@ describe('Categorías', () => {
     expect(categorias[1].nombre).toBe(categoria_2.nombre);
   });
   test('eliminar ---> Eliminar categoría', () => {
-    LC.eliminar(categoria_0);
-    const categoria = LC.getCategorias().find(c => c.id === categoria_0.id);
+    LC.eliminar(categoria_1);
+    const categoria = LC.getCategorias().find(c => c.id === categoria_1.id);
     expect(categoria).toBe(undefined);
   });
 })
