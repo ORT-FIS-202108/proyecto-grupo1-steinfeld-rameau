@@ -17,10 +17,10 @@ export const crearGraficoCategorias = (ctx) => {
   });
 }
 
-  export const crearGraficoBalance = (ctx) => {
-    graficoBalance?.destroy();
-    graficoBalance = new Chart(ctx, {
-      type: 'bar',
-      data: getBalanceData(listaMovimientos.getMovimientos())
-    });
-  }
+export const crearGraficoBalance = (ctx) => {
+  graficoBalance?.destroy();
+  graficoBalance = new Chart(ctx, {
+    type: 'bar',
+    data: getBalanceData(listaMovimientos.getMovimientos())
+  });
+}

@@ -3,7 +3,6 @@ import ListaCategorias from './lista-categorias.mjs';
 
 describe('Categorías', () => {
   const LC = new ListaCategorias();
-
   const categoria_0 = new Categoria('Supermercado', 'egreso', 0);
   const categoria_1 = new Categoria('Ropa', 'egreso', 1);
   const categoria_2 = new Categoria('Sueldo', 'ingreso', 2);
@@ -12,6 +11,10 @@ describe('Categorías', () => {
     LC.agregar(categoria_0);
     const categoria = LC.getCategorias().find(c => c.id === categoria_0.id);
     expect(categoria).not.toBe(null);
+  });
+  test('agregar ---> Agregar categoría vacía', () => {
+    const agregarVacia = () => LC.agregar({});
+    expect(agregarVacia).toThrowError('Debe introducir un nombre y seleccionar un tipo para agregar una categoría.');
   });
   test('agregar ---> Agregar categoría existente', () => {
     const agregarExistente = () => LC.agregar(categoria_0);
