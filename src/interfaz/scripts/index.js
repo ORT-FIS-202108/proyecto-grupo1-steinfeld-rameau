@@ -23,7 +23,7 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
 
 // MOVIMIENTOS
 const textFieldNombre = new MDCTextField(document.getElementById('nombreMovimiento'));
-const categoriaSeleccionada = new MDCSelect(document.getElementById('seleccionar-categoria'));
+const categoriaSeleccionada = document.getElementById('seleccionar-categoria');
 const seleccionarTipo = new MDCSelect(document.getElementById('select-tipo'));
 const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
 const textFieldValor = new MDCTextField(document.getElementById('valor'));
