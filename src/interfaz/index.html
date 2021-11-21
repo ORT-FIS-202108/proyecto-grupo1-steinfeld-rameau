@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="bundle.css">
@@ -19,7 +18,7 @@
 
       </div>
 
-      <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-bar" id="main-tab" role="tablist">
           <div class="mdc-tab-scroller">
               <div class="mdc-tab-scroller__scroll-area">
                   <div class="mdc-tab-scroller__scroll-content">
@@ -63,11 +62,7 @@
   </header>
 
   <main class="mdc-top-app-bar--fixed-adjust">
-
-      <section class="content mdc-layout-grid movimientos">
-          <div class="mdc-layout-grid__inner">
-              <h1>Movimientos</h1>
-          </div>
+      <section name="main-tab-section" class="content mdc-layout-grid">
           <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-6">
                   <div class="button boton-exportar">
@@ -210,11 +205,8 @@
           </div>
       </section>
 
-      <section class="categoria content mdc-layout-grid sample-content--hidden">
-          <div class="mdc-layout-grid__inner">
-              <h1>Categorias</h1>
-          </div>
-          <div class="mdc-layout-grid__inner">
+      <section name="main-tab-section" class="content sample-content--hidden">
+          <div class="mdc-layout-grid__inner categoria">
               <div class="mdc-layout-grid__cell--span-6 categoria__columna">
                   <ul class="categoria__columna--lista" id="listar-categorias"></ul>
               </div>
@@ -278,8 +270,17 @@
               </div>
           </div>
       </section>
-      <section class="content sample-content--hidden">
-          <h1>Gráficas</h1>
+      <section name="main-tab-section" class="content sample-content--hidden">
+          <div class="chart-main-container">
+              <div class="chart-container">
+                  Balance
+                  <canvas id="balance-chart" width="300px" height="300px"></canvas>
+              </div>
+              <div class="chart-container">
+                  Egresos
+                  <canvas id="categorias-chart-egresos" width="300px" height="300px"></canvas>
+              </div>
+          </div>
       </section>
   </main>
 
@@ -298,9 +299,8 @@
 
   <footer class="footer">
       <span class="footer-main">Fundamentos de Ingenier&iacute;a de Software</span>
-      <span class="footer-secondary">Stella Steinfeld - Alvaro Rameau &#9426 2021</span>
+      <span class="footer-secondary">Stella Steinfeld - Alvaro Rameau - Juan Romero &#9426 2021</span>
   </footer>
 </body>
 <script src="bundle.js" async></script>
-
 </html>
