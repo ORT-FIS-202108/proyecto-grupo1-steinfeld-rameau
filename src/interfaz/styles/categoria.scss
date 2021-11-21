@@ -1,4 +1,5 @@
 .categoria {
+  padding-bottom: 0 !important;
   &__columna {
     flex-direction: column;
     display: flex;
@@ -24,5 +25,8 @@
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAdElEQVRIiWNgGCmggYGB4T8a7iDXsFNYDCMWn0A3jAmLBf/JdRmFegcpYMQhTq5XMczDFgdUBcRYYMbAwGBBgjgKICaIGLGI4RIfnEE0asGoBQNsAQsRasxwOASXOFHgMQPplc0jUizwhGogxXAPcn0zuAEAY8k18yFHYbMAAAAASUVORK5CYII=");
       cursor: pointer;
     }
+  }
+  .button {
+    margin-top: 20px;
   }
 }
