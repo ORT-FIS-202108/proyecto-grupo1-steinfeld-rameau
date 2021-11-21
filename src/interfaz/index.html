@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="bundle.css">
+    <title>Aplicacion Mis Gastos</title>
 </head>
 
 <body>
@@ -63,7 +64,25 @@
   <main class="mdc-top-app-bar--fixed-adjust">
       <section name="main-tab-section" class="content mdc-layout-grid">
           <div class="mdc-layout-grid__inner">
-              <div id="listar-movimientos" class="mdc-layout-grid__cell--span-6"></div>
+              <div class="mdc-layout-grid__cell--span-6">
+                  <div class="button boton-exportar">
+                      <button id="exportarBtn" class="mdc-button mdc-button--raised">
+                          <span class="mdc-button__label">EXPORTAR</span>
+                      </button>
+                  </div>
+                  <div class="tabla-oculta">
+                      <table id="tblData">
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Valor</th>
+                              <th>Categoria</th>
+                              <th>Fecha</th>
+                              <th>Tipo</th>
+                          </tr>
+                      </table>
+                  </div>
+                  <div id="listar-movimientos"></div>
+              </div>
               <div class="mdc-layout-grid__cell--span-6 movimientos--form formulario">
                   <h2 id="subtituloMovimiento">Añadir nuevo movimiento</h2>
 
