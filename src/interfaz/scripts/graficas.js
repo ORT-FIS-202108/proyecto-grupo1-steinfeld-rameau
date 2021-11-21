@@ -1,20 +1,13 @@
-import { Chart, registerables, plugins } from 'chart.js';
+import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
 import { listaCategorias } from './categorias';
+import { listaMovimientos } from './movimientos';
 
 const MONTHS = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
-const movimientosMock = [
-  {nombre: "Compra Disco", tipo: "egreso", categoria: "supermercado", valor: 300, fecha: '2020-11-02'},
-  {nombre: "Compra Tata", tipo: "egreso", categoria: "supermercado", valor: 3900, fecha: '2020-02-02'},
-  {nombre: "Compra Tienda", tipo: "egreso", categoria: "ropa", valor: 1200, fecha: '2020-012-02'},
-  {nombre: "Compra geant", tipo: "egreso", categoria: "supermercado", valor: 1300, fecha: '2020-02-02'},
-]
-
 let graficoBalance = null;
 let graficoEgresos = null;
-let graficoIngresos = null;
 
 const verificarMesYAnio = (m, anio, mes) => {
   const fechaMovimiento = new Date(m.fecha);
@@ -24,17 +17,17 @@ const verificarMesYAnio = (m, anio, mes) => {
   return mesMovimiento === mes && anioMovimiento === anio;
 }
 
-const getCategoriasData = (tipo) => {
-  const categoriasTotales = listaCategorias.getCategorias().filter(categoria => categoria.tipo === tipo);
-  const movimientos = movimientosMock.filter(movimiento => movimiento.tipo = tipo);
+const getCategoriasData = () => {
+  const categoriasTotales = listaCategorias.getCategorias().filter(categoria => categoria.tipo.toUpperCase() === 'EGRESO');
+  const movimientos = listaMovimientos.getMovimientos().filter(movimiento => movimiento.tipo.toUpperCase() === 'EGRESO');
   const categorias = [];
 
   movimientos.forEach(movimiento => {
     const nombre = movimiento.categoria;
     const valor = movimiento.valor;
 
-    if (categoriasTotales.find(cat => cat.nombre === nombre)) {
-      const categoriaExistente = categorias.find(cat => cat.nombre === nombre)
+    if (categoriasTotales.find(cat => cat.nombre.toUpperCase() === nombre.toUpperCase())) {
+      const categoriaExistente = categorias.find(cat => cat.nombre.toUpperCase() === nombre.toUpperCase())
 
       if (!!categoriaExistente) {
         categorias.forEach((c, indice) => {
@@ -48,7 +41,7 @@ const getCategoriasData = (tipo) => {
       } else {
         categorias.push({
           nombre,
-          color: categoriasTotales.find(c => c.nombre === nombre)?.color,
+          color: categoriasTotales.find(c => c.nombre.toUpperCase() === nombre.toUpperCase())?.color,
           valor
         })
       }
@@ -59,39 +52,37 @@ const getCategoriasData = (tipo) => {
   const data = [];
   const backgroundColor = [];
   
-  
   categorias.forEach(categoria => {
     labels.push(categoria.nombre);
     data.push(categoria.valor);
     backgroundColor.push(categoria.color);
   });
 
+  if (data.length === 0) {
+    labels.push("Sin datos");
+    data.push(0);
+    backgroundColor.push(`#${Math.floor(Math.random()*16777215).toString(16)}`);
+  }
+
   return {
       labels, 
       datasets: [
         {
           data, 
-          label: tipo,
+          label: 'Egresos',
           backgroundColor
         }
       ]
     }
 }
 
-export const crearGraficoCategorias = (ctx, tipo) => {
+export const crearGraficoCategorias = (ctx) => {
   graficoEgresos?.destroy();
-  graficoIngresos?.destroy();
 
-  const grafico = new Chart(ctx, {
+  graficoEgresos = new Chart(ctx, {
     type: 'pie',
-    data: getCategoriasData(tipo)
+    data: getCategoriasData()
   });
-  
-  if (tipo === 'egresos') {
-    graficoEgresos = grafico;
-  } else {
-    graficoIngresos = grafico;
-  } 
 }
 
 const getBalanceData = () => {
@@ -109,11 +100,15 @@ const getBalanceData = () => {
     labels.push(MONTHS[mes]);
     fechaInicio.setMonth(mes + 1);
 
-    const movimientosDelMes = movimientosMock.filter(m => verificarMesYAnio(m, anio, mes));
+    const movimientosDelMes = listaMovimientos.getMovimientos().filter(m => verificarMesYAnio(m, anio, mes));
     
     let valor = 0;
     movimientosDelMes.forEach(mm => {
-      valor = valor + mm.valor;
+      if (mm.tipo.toUpperCase() === 'EGRESO') {
+        valor = valor - mm.valor;
+      } else {
+        valor = valor + mm.valor;
+      }
     })
 
     data.push(valor);
@@ -127,6 +122,7 @@ const getBalanceData = () => {
     datasets: [
       {
         data, 
+        label: 'Balance',
         options: {
           scales: {
             y: {

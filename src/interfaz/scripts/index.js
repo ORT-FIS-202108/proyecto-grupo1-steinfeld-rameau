@@ -6,7 +6,7 @@ import { MDCSelect } from '@material/select';
 
 import {agregarMovimiento} from "./movimientos";
 import { agregarCategoria } from './categorias';
-import { crearGraficoBalance, crearGraficoCategorias, destruirGraficos, graficoBalance } from './graficas';
+import { crearGraficoBalance, crearGraficoCategorias } from './graficas';
 
 // MOVIMIENTOS
 const textFieldNombre = new MDCTextField(document.getElementById('nombreMovimiento'));
@@ -42,12 +42,9 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
     if (index === 2) {
       const balanceCtx = document.getElementById('balance-chart').getContext('2d');
       crearGraficoBalance(balanceCtx);
-
-      const categoriasIngresosCtx = document.getElementById('categorias-chart-ingresos').getContext('2d');
-      crearGraficoCategorias(categoriasIngresosCtx, 'ingreso');
       
       const categoriasEgresosCtx = document.getElementById('categorias-chart-egresos').getContext('2d');
-      crearGraficoCategorias(categoriasEgresosCtx, 'egreso');
+      crearGraficoCategorias(categoriasEgresosCtx);
     }
   });
 });
