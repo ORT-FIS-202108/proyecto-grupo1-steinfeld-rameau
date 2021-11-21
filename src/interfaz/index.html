@@ -119,39 +119,6 @@
                       <input type="date" class="mdc-text-field__input" aria-labelledby="fecha">
                   </label>
 
-                  <div id="seleccionar-categoria" class="mdc-select mdc-select--outlined">
-                      <div class="mdc-select__anchor" aria-labelledby="seleccionar-categoria">
-                          <span class="mdc-notched-outline">
-                            <span class="mdc-notched-outline__leading"></span>
-                            <span class="mdc-notched-outline__notch">
-                              <span id="outlined-select-label-categoria" class="mdc-floating-label">Seleccionar Categoria</span>
-                            </span>
-                            <span class="mdc-notched-outline__trailing"></span>
-                          </span>
-                          <span class="mdc-select__selected-text-container">
-                              <span id="demo-selected-text-categoria" class="mdc-select__selected-text"></span>
-                           </span>
-                          <span class="mdc-select__dropdown-icon">
-                                <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
-                                  <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
-                                           points="7 10 12 15 17 10">
-                                  </polygon>
-                                  <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
-                                           points="7 15 12 10 17 15">
-                                  </polygon>
-                                </svg>
-                              </span>
-                      </div>
-
-                      <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                          <ul id="seleccionar-categoria-select" class="mdc-list" role="listbox" aria-label="Seleccionar Categoria">
-                              <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
-                                  <span class="mdc-list-item__ripple"></span>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-
                   <div id="select-tipo" class="mdc-select mdc-select--outlined">
                       <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
                       <span class="mdc-notched-outline">
@@ -190,6 +157,19 @@
                                   <span class="mdc-list-item__text">Egreso</span>
                               </li>
                           </ul>
+                      </div>
+                  </div>
+                  <div class="custom-select">
+                      <div class="form-control">
+                          <label>Categoria </label>
+                          <div class="select-wrapper">
+                              <select id="seleccionar-categoria" disabled>
+                                  <option value="">Seleccionar categoria</option>
+                              </select>
+                              <fieldset>
+                                  <legend>&#8203;</legend>
+                              </fieldset>
+                          </div>
                       </div>
                   </div>
 

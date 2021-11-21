@@ -6,7 +6,7 @@ import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
 const nombreMovimiento = new MDCTextField(document.getElementById('nombreMovimiento'));
-const categoriaMovimiento = new MDCSelect(document.getElementById('seleccionar-categoria'));
+const categoriaMovimiento = document.getElementById('seleccionar-categoria');
 const tipoMovimiento = new MDCSelect(document.getElementById('select-tipo'));
 const fechaMovimiento = new MDCTextField(document.getElementById('fecha'));
 const valorMovimiento = new MDCTextField(document.getElementById('valor'));

@@ -1,9 +1,15 @@
 import { MDCSnackbar } from '@material/snackbar';
+
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
 import ListaCategorias from '../../dominio/categorias/lista-categorias.mjs';
 import Categoria from '../../dominio/categorias/categoria.mjs';
+
+const filtroCat = new MDCSelect(document.getElementById('select-tipo'));
+const categoriaMov = document.getElementById('seleccionar-categoria');
+
+const listaCategorias = new ListaCategorias();
 
 export const listaCategorias = new ListaCategorias();
 
@@ -14,8 +20,6 @@ const listarCategorias = () => {
     const categorias = listaCategorias.getCategorias();
     const lista = document.getElementById('listar-categorias');
     lista.innerHTML = '';
-
-    const selectCat = document.getElementById('seleccionar-categoria-select');
   
     categorias.forEach(categoria => {
       const deleteButton = document.createElement('button');
@@ -28,12 +32,22 @@ const listarCategorias = () => {
       listItem.appendChild(deleteButton);
   
       lista.appendChild(listItem);
-
-      //select en movimientos
-        let newSelectElement = '<li class="mdc-list-item" aria-selected="false" data-value="' + categoria.nombre.toString() + '" role="option">' + '<span class="mdc-list-item__ripple"></span>' + '<span class="mdc-list-item__text">' + categoria.nombre.toString() + '</span>' + '</li>';
-        document.getElementById('seleccionar-categoria-select').innerHTML += newSelectElement;
     })
   }
+
+filtroCat.listen('click', () => habilitarCategoria());
+const habilitarCategoria = () => {
+    const categorias = listaCategorias.getCategorias();
+    categoriaMov.innerHTML = '';
+    categorias.forEach(categoria => {
+        if(categoria.tipo.toUpperCase() === filtroCat.value.toUpperCase()) {
+            let newSelectElement = '<option value="' + categoria.nombre.toString() + '">'  + categoria.nombre.toString() + '</option>';
+            categoriaMov.innerHTML += newSelectElement;
+        }
+    })
+
+    categoriaMov.disabled = false;
+}
 
 export const agregarCategoria = (nombre, tipo) => {
     const categorias = listaCategorias.getCategorias();
