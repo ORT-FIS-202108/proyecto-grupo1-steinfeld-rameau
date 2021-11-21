@@ -5,8 +5,8 @@ export default class ListaMovimientos {
   }
 
   agregar(movimiento) {
-
-    if (movimiento.nombre || movimiento.tipo || movimiento.fecha || movimiento.valor) {
+    let movimientosAgregadas = this.movimientos.some(m => m.id == movimiento.id);
+    if (movimiento.nombre && movimiento.tipo && movimiento.fecha && movimiento.categoria && movimiento.valor && !movimientosAgregadas) {
       this.movimientos.push(movimiento);
     } else {
       throw new Error(`No se pudo agregar. Por favor ingresar todos los campos del formulario.`);

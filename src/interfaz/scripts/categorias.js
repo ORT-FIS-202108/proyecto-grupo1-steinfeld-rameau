@@ -9,8 +9,6 @@ import Categoria from '../../dominio/categorias/categoria.mjs';
 const filtroCat = new MDCSelect(document.getElementById('select-tipo'));
 const categoriaMov = document.getElementById('seleccionar-categoria');
 
-const listaCategorias = new ListaCategorias();
-
 export const listaCategorias = new ListaCategorias();
 
 const nombreCat = new MDCTextField(document.getElementById('nombre'));
