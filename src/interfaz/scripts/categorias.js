@@ -5,13 +5,14 @@ import { MDCSelect } from '@material/select';
 import ListaCategorias from '../../dominio/lista-categorias.mjs';
 import Categoria from '../../dominio/categoria.mjs';
 
-export const listaCategorias = new ListaCategorias();
+const listaCategorias = new ListaCategorias();
 
 const nombreCat = new MDCTextField(document.getElementById('nombre'));
 const tipoCat = new MDCSelect(document.getElementById('seleccionar-tipo-categoria'));
 
 const listarCategorias = () => {
     const categorias = listaCategorias.getCategorias();
+    
     const lista = document.getElementById('listar-categorias');
     lista.innerHTML = '';
 

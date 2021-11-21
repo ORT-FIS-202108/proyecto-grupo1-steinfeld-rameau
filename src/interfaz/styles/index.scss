@@ -44,7 +44,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .mdc-top-app-bar {
@@ -61,20 +60,12 @@ body {
   height: 2.5rem;
 }
 
-.mdc-tab-bar {
-  background-color: #8559da;
+.mdc-top-app-bar--fixed-adjust {
+  height: 100%;
 }
 
-.charts {
-  background-color: #ffffff;
-  
-  .mdc-tab__content .mdc-tab__text-label {
-    color: #00796b;
-  }
-
-  .mdc-tab__content .mdc-tab__icon {
-    color: #00796b;
-    }
+.mdc-tab-bar {
+  background-color: #8559da;
 }
 
 .mdc-tab__content .mdc-tab__text-label {
@@ -92,6 +83,7 @@ color: #ffffff;
 
 .content {
   margin: 5rem auto;
+  padding-bottom: 20rem;
 }
 
 .sample-content--hidden {
@@ -117,18 +109,6 @@ color: #ffffff;
   border-radius: 50%;
   color: #004c40;
   font-size: 15px;
-}
-
-.chart-main-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  
-  .chart-container {
-    width: 310px;
-    height: 310px;
-    margin: 15px;
-  }
 }
 
 .footer {
