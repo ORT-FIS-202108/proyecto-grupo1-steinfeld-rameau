@@ -8,7 +8,8 @@ const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
 
 import { agregarCategoria } from './categorias';
-import {agregarMovimiento} from "./movimientos";
+import { agregarMovimiento } from "./movimientos";
+import { exportarExcel } from "./exportarDatos";
 
 const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
@@ -29,6 +30,9 @@ const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
 const textFieldValor = new MDCTextField(document.getElementById('valor'));
 const agregarMovimientoBtn = new MDCRipple(document.getElementById('agregarMovimientoBtn'));
 
+const exportarDatosBtn = new MDCRipple(document.getElementById('exportarBtn'));
+
+exportarDatosBtn.listen('click', () => exportarExcel('tblData', 'datos-movimientos'));
 agregarMovimientoBtn.listen('click', () => agregarMovimiento(textFieldNombre.value, categoriaSeleccionada.value, seleccionarTipo.value, textFieldFecha.value, textFieldValor.value));
 
 // CATEGORIAS
