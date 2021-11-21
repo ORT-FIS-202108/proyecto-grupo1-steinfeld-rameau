@@ -4,7 +4,7 @@ import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
-import {agregarMovimiento} from "./movimientos";
+import { agregarMovimiento } from "./movimientos";
 import { agregarCategoria } from './categorias';
 import { crearGraficoBalance, crearGraficoCategorias } from './graficas';
 import { exportarExcel } from "./exportarDatos";
@@ -22,7 +22,7 @@ tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
     if (index === 2) {
       const balanceCtx = document.getElementById('balance-chart').getContext('2d');
       crearGraficoBalance(balanceCtx);
-      
+
       const categoriasEgresosCtx = document.getElementById('categorias-chart-egresos').getContext('2d');
       crearGraficoCategorias(categoriasEgresosCtx);
     }

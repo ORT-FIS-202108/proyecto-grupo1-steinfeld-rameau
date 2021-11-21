@@ -23,7 +23,7 @@ describe('Graficos', () => {
     });
     test('getCategoriasData ---> Obtener datos para renderizar gráfico de torta (categorías)', () => {
         const { labels, datasets } = getCategoriasData([categoria_0, categoria_1, categoria_2], [movimiento_0, movimiento_1, movimiento_2, movimiento_3]);
-  
+
         expect(labels.length).toBe(2);
         expect(labels[0]).toBe('supermercado');
         expect(labels[1]).toBe('tiendas');
@@ -34,7 +34,7 @@ describe('Graficos', () => {
     });
     test('getCategoriasData ---> Obtener datos para renderizar gráfico de torta (vacío)', () => {
         const { labels, datasets } = getCategoriasData([], []);
-  
+
         expect(labels.length).toBe(1);
         expect(labels[0]).toBe('Sin datos');
 
@@ -43,7 +43,7 @@ describe('Graficos', () => {
     });
     test('getCategoriasData ---> Obtener datos para renderizar gráfico de torta (sin categorías)', () => {
         const { labels, datasets } = getCategoriasData([], [movimiento_0, movimiento_1, movimiento_2, movimiento_3]);
-  
+
         expect(labels.length).toBe(1);
         expect(labels[0]).toBe('Sin datos');
 
@@ -52,7 +52,7 @@ describe('Graficos', () => {
     });
     test('getBalanceData ---> Obtener datos para renderizar gráfico de balance', () => {
         const { labels, datasets } = getBalanceData([movimiento_0, movimiento_1, movimiento_2, movimiento_3]);
-  
+
         expect(labels.length).toBe(13);
         expect(labels[0]).toBe('Noviembre');
         expect(labels[12]).toBe('Noviembre');

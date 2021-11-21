@@ -1,7 +1,7 @@
 import Movimiento from "../../dominio/movimientos/movimiento.mjs";
 import ListaMovimientos from "../../dominio/movimientos/lista-movimientos.mjs";
 
-import {MDCSnackbar} from "@material/snackbar";
+import { MDCSnackbar } from "@material/snackbar";
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
@@ -50,7 +50,7 @@ const listarMovimientos = () => {
         let [year, month, day] = movimiento.fecha.split('-');
         //crear dato en la lista
         switch (month) {
-            case '01' :
+            case '01':
                 month = 'Enero';
                 break;
             case '02':
@@ -169,10 +169,10 @@ const listarMovimientos = () => {
     //Panel colapsable - codigo de https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
     let coll = document.getElementsByClassName("collapsible");
     for (let i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
+        coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-            if (content.style.maxHeight){
+            if (content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -202,7 +202,7 @@ const editar = (movimiento) => {
     document.getElementById('editarMovimientoBtn').classList.add("visible");
     document.getElementById('agregarMovimientoBtn').classList.remove("visible");
 
-    document.getElementById('editarMovimientoBtn').addEventListener("click", function() {
+    document.getElementById('editarMovimientoBtn').addEventListener("click", function () {
         //cambio titulo
         const tituloFormulario = document.getElementById('subtituloMovimiento');
         tituloFormulario.textContent = 'Añadir nuevo movimiento';
