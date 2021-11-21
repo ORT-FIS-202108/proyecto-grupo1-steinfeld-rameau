@@ -5,11 +5,11 @@ export default class ListaCategorias {
   }
 
   agregar(categoria) {
-    let categoriasAgregadas = this.categorias.some(m => m.nombre == categoria.nombre);
+    let categoriasAgregadas = this.categorias.some(m => m.nombre == categoria.nombre && m.tipo == categoria.tipo);
     if (!categoriasAgregadas) {
       this.categorias.push(categoria);
     } else {
-      throw new Error(`No se pudo agregar. ${categoria.nombre} ya se encuentra en la lista.`);
+      throw new Error(`No se pudo agregar. ${categoria.nombre} ya se encuentra agregado como categoria.`);
     }
   }
 

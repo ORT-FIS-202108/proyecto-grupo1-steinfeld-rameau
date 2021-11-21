@@ -1,17 +1,23 @@
 import { MDCSnackbar } from '@material/snackbar';
+
+import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 
-import ListaCategorias from '../../dominio/lista-categorias.mjs';
-import Categoria from '../../dominio/categoria.mjs';
+import ListaCategorias from '../../dominio/categorias/lista-categorias.mjs';
+import Categoria from '../../dominio/categorias/categoria.mjs';
 
 const filtroCat = new MDCSelect(document.getElementById('select-tipo'));
 const categoriaMov = document.getElementById('seleccionar-categoria');
 
 const listaCategorias = new ListaCategorias();
 
+export const listaCategorias = new ListaCategorias();
+
+const nombreCat = new MDCTextField(document.getElementById('nombre'));
+const tipoCat = new MDCSelect(document.getElementById('seleccionar-tipo-categoria'));
+
 const listarCategorias = () => {
     const categorias = listaCategorias.getCategorias();
-
     const lista = document.getElementById('listar-categorias');
     lista.innerHTML = '';
   
@@ -28,6 +34,7 @@ const listarCategorias = () => {
       lista.appendChild(listItem);
     })
   }
+
 filtroCat.listen('click', () => habilitarCategoria());
 const habilitarCategoria = () => {
     const categorias = listaCategorias.getCategorias();
@@ -41,6 +48,7 @@ const habilitarCategoria = () => {
 
     categoriaMov.disabled = false;
 }
+
 export const agregarCategoria = (nombre, tipo) => {
     const categorias = listaCategorias.getCategorias();
         let id = categorias.length;
@@ -53,6 +61,8 @@ export const agregarCategoria = (nombre, tipo) => {
           snackbar.open();
         } finally {
           listarCategorias();
+          nombreCat.value = '';
+          tipoCat.value = '';
         }
 }
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="bundle.css">
+    <title>Aplicacion Mis Gastos</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
       </div>
 
-      <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-bar" id="main-tab" role="tablist">
           <div class="mdc-tab-scroller">
               <div class="mdc-tab-scroller__scroll-area">
                   <div class="mdc-tab-scroller__scroll-content">
@@ -62,13 +62,27 @@
   </header>
 
   <main class="mdc-top-app-bar--fixed-adjust">
-
-      <section class="content mdc-layout-grid movimientos">
+      <section name="main-tab-section" class="content mdc-layout-grid">
           <div class="mdc-layout-grid__inner">
-              <h1>Movimientos</h1>
-          </div>
-          <div class="mdc-layout-grid__inner">
-              <div id="listar-movimientos" class="mdc-layout-grid__cell--span-6"></div>
+              <div class="mdc-layout-grid__cell--span-6">
+                  <div class="button boton-exportar">
+                      <button id="exportarBtn" class="mdc-button mdc-button--raised">
+                          <span class="mdc-button__label">EXPORTAR</span>
+                      </button>
+                  </div>
+                  <div class="tabla-oculta">
+                      <table id="tblData">
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Valor</th>
+                              <th>Categoria</th>
+                              <th>Fecha</th>
+                              <th>Tipo</th>
+                          </tr>
+                      </table>
+                  </div>
+                  <div id="listar-movimientos"></div>
+              </div>
               <div class="mdc-layout-grid__cell--span-6 movimientos--form formulario">
                   <h2 id="subtituloMovimiento">Añadir nuevo movimiento</h2>
 
@@ -171,10 +185,7 @@
           </div>
       </section>
 
-      <section class="content sample-content--hidden">
-          <div class="mdc-layout-grid__inner">
-              <h1>Categorias</h1>
-          </div>
+      <section name="main-tab-section" class="content sample-content--hidden">
           <div class="mdc-layout-grid__inner categoria">
               <div class="mdc-layout-grid__cell--span-6 categoria__columna">
                   <ul class="categoria__columna--lista" id="listar-categorias"></ul>
@@ -239,8 +250,17 @@
               </div>
           </div>
       </section>
-      <section class="content sample-content--hidden">
-          <h1>Gráficas</h1>
+      <section name="main-tab-section" class="content sample-content--hidden">
+          <div class="chart-main-container">
+              <div class="chart-container">
+                  Balance
+                  <canvas id="balance-chart" width="300px" height="300px"></canvas>
+              </div>
+              <div class="chart-container">
+                  Egresos
+                  <canvas id="categorias-chart-egresos" width="300px" height="300px"></canvas>
+              </div>
+          </div>
       </section>
   </main>
 
@@ -259,9 +279,8 @@
 
   <footer class="footer">
       <span class="footer-main">Fundamentos de Ingenier&iacute;a de Software</span>
-      <span class="footer-secondary">Stella Steinfeld - Alvaro Rameau &#9426 2021</span>
+      <span class="footer-secondary">Stella Steinfeld - Alvaro Rameau - Juan Romero &#9426 2021</span>
   </footer>
 </body>
 <script src="bundle.js" async></script>
-
 </html>

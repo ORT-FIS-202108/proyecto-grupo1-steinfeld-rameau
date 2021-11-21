@@ -1,6 +1,5 @@
-import Movimiento from "../../dominio/movimiento.mjs";
-import Categoria from '../../dominio/categoria.mjs';
-import ListaMovimientos from "../../dominio/lista-movimientos.mjs";
+import Movimiento from "../../dominio/movimientos/movimiento.mjs";
+import ListaMovimientos from "../../dominio/movimientos/lista-movimientos.mjs";
 
 import {MDCSnackbar} from "@material/snackbar";
 import { MDCTextField } from '@material/textfield';
@@ -11,7 +10,8 @@ const categoriaMovimiento = document.getElementById('seleccionar-categoria');
 const tipoMovimiento = new MDCSelect(document.getElementById('select-tipo'));
 const fechaMovimiento = new MDCTextField(document.getElementById('fecha'));
 const valorMovimiento = new MDCTextField(document.getElementById('valor'));
-const listaMovimientos = new ListaMovimientos();
+
+export const listaMovimientos = new ListaMovimientos();
 
 const limpiarFormularioMovimiento = () => {
     nombreMovimiento.value = '';
@@ -43,12 +43,12 @@ export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
 const listarMovimientos = () => {
     const movimientos = listaMovimientos.getMovimientos();
     const lista = document.getElementById('listar-movimientos');
+    const tabla = document.getElementById('tblData');
     lista.innerHTML = '';
-
 
     movimientos.forEach(movimiento => {
         let [year, month, day] = movimiento.fecha.split('-');
-
+        //crear dato en la lista
         switch (month) {
             case '01' :
                 month = 'Enero';
@@ -144,6 +144,26 @@ const listarMovimientos = () => {
             lista.appendChild(collapseButton);
             lista.appendChild(contentCollapse);
         }
+        //crear fila en la tabla de exportacion
+        const datoNombre = document.createElement('td');
+        datoNombre.textContent = movimiento.nombre;
+        const datoValor = document.createElement('td');
+        datoValor.textContent = movimiento.valor;
+        const datoCategoria = document.createElement('td');
+        datoCategoria.textContent = movimiento.categoria;
+        const datoFecha = document.createElement('td');
+        datoFecha.textContent = movimiento.fecha;
+        const datoTipo = document.createElement('td');
+        datoTipo.textContent = movimiento.tipo;
+
+        const fila = document.createElement('row');
+        fila.appendChild(datoNombre);
+        fila.appendChild(datoValor);
+        fila.appendChild(datoCategoria);
+        fila.appendChild(datoFecha);
+        fila.appendChild(datoTipo);
+
+        tabla.appendChild(fila);
 
     })
     //Panel colapsable - codigo de https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
