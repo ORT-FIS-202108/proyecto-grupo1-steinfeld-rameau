@@ -1,6 +1,5 @@
 import { MDCRipple } from '@material/ripple';
 import { MDCTabBar } from '@material/tab-bar';
-import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 

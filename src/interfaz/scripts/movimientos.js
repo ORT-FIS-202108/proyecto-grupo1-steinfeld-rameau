@@ -39,7 +39,6 @@ export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
     }
 }
 
-
 const listarMovimientos = () => {
     const movimientos = listaMovimientos.getMovimientos();
     const lista = document.getElementById('listar-movimientos');
@@ -206,18 +205,23 @@ const editar = (movimiento) => {
         //cambio titulo
         const tituloFormulario = document.getElementById('subtituloMovimiento');
         tituloFormulario.textContent = 'Añadir nuevo movimiento';
-
         //edito instancia de movimiento con la nueva data
-        movimiento.nombre = nombreMovimiento.value;
-        movimiento.categoria = categoriaMovimiento.value;
-        movimiento.tipo = tipoMovimiento.value;
-        movimiento.fecha = fechaMovimiento.value;
-        movimiento.valor = valorMovimiento.value;
+        if(!nombreMovimiento.value || !categoriaMovimiento.value || !tipoMovimiento.value || !fechaMovimiento.value || !valorMovimiento.value) {
+            const errorLabel = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
+            errorLabel.labelText = 'Por favor ingresar todos los campos del formulario.';
+            errorLabel.open();
+        } else {
+            movimiento.nombre = nombreMovimiento.value;
+            movimiento.categoria = categoriaMovimiento.value;
+            movimiento.tipo = tipoMovimiento.value;
+            movimiento.fecha = fechaMovimiento.value;
+            movimiento.valor = valorMovimiento.value;
 
-        listarMovimientos();
-        limpiarFormularioMovimiento();
-        //cambio boton
-        document.getElementById('editarMovimientoBtn').classList.remove("visible");
-        document.getElementById('agregarMovimientoBtn').classList.add("visible");
+            listarMovimientos();
+            limpiarFormularioMovimiento();
+            //cambio boton
+            document.getElementById('editarMovimientoBtn').classList.remove("visible");
+            document.getElementById('agregarMovimientoBtn').classList.add("visible");
+        }
     });
 }
