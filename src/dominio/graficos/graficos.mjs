@@ -1,7 +1,8 @@
 // Grafico de categorias
 export const verificarMesYAnio = (m, anio, mes) => {
   const fechaMovimiento = new Date(m.fecha);
-  const mesMovimiento = fechaMovimiento.getMonth();
+  const diaMovimiento = fechaMovimiento.getDate();
+  const mesMovimiento = diaMovimiento === 31 ? fechaMovimiento.getMonth() + 1 : fechaMovimiento.getMonth();
   const anioMovimiento = fechaMovimiento.getFullYear();
 
   return mesMovimiento === mes && anioMovimiento === anio;
