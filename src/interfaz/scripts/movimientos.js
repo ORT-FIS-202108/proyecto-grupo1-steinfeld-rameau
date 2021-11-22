@@ -39,7 +39,6 @@ export const agregarMovimiento = (nombre, categoria, tipo, fecha, valor) => {
     }
 }
 
-
 const listarMovimientos = () => {
     const movimientos = listaMovimientos.getMovimientos();
     const lista = document.getElementById('listar-movimientos');
@@ -207,7 +206,6 @@ const editar = (movimiento) => {
         const tituloFormulario = document.getElementById('subtituloMovimiento');
         tituloFormulario.textContent = 'Añadir nuevo movimiento';
         //edito instancia de movimiento con la nueva data
-        debugger;
         if(!nombreMovimiento.value || !categoriaMovimiento.value || !tipoMovimiento.value || !fechaMovimiento.value || !valorMovimiento.value) {
             const errorLabel = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
             errorLabel.labelText = 'Por favor ingresar todos los campos del formulario.';
