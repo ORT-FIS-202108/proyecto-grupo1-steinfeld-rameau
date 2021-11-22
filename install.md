@@ -13,11 +13,18 @@ cd ..
 cd interfaz
 npm install
 ```
-Para ejecutar la aplicación y acceder a la interfaz de usuario:
+Para ejecutar la aplicación y acceder a la interfaz de usuario en modo desarrollo:
 ```
 cd src
 cd interfaz
-npm run start
+npm run dev
 ```
-Abrir en el navegador `localhost:8080`.
-No cambiar la configuración de puertos.
+Para ejecutar la aplicación y acceder a la interfaz de usuario en modo produccion:
+```
+cd src
+cd interfaz
+npm run build
+```
+
+Una vez hecho esto se va a abrir una pestaña del navegador con el servidor localhost:8080.
+La diferencia entre el ambiente de desarrollo y produccion es que en el ultimo los archivos js y css estan mimificados y sin comentarios y en el otro hay comentarios y esos archivos estan indentados.
