@@ -11,6 +11,7 @@ Estudiantes:
 |----|----|
 | Alvaro Rameau | 182035 |
 | Stella Steinfeld | 229398 |
+| Juan Romero | 252446 |
 
 Lectura: 30-ago-2021
 

@@ -8,13 +8,18 @@ describe('Graficos', () => {
     const categoria_1 = new Categoria('Tiendas', 'egreso', 1);
     const categoria_2 = new Categoria('Sueldo', 'ingreso', 2);
 
-    const movimiento_0 = new Movimiento('Compra en super', 'supermercado', 'egreso', '2020-11-02', 1200, 0);
+    const movimiento_0 = new Movimiento('Compra en super', 'supermercado', 'egreso', '2020-11-31', 1200, 0);
     const movimiento_1 = new Movimiento('Compra en shoping', 'tiendas', 'egreso', '2021-10-02', 4200, 1);
     const movimiento_2 = new Movimiento('Sueldo', 'sueldo', 'ingreso', '2021-03-10', 40000, 2);
     const movimiento_3 = new Movimiento('Regalos navidad', 'tiendas', 'egreso', '2020-12-24', 5000, 3);
+    const movimiento_4 = new Movimiento('Ropa para fiesta', 'tiendas', 'egreso', '2020-11-01', 15000, 4);
 
     test('verificarMesYAnio ---> Verificar mes y año de un movimiento (true)', () => {
         const res = verificarMesYAnio(movimiento_0, 2020, 10);
+        expect(res).toBe(true);
+    });
+    test('verificarMesYAnio ---> Verificar mes y año de un movimiento (primer dia del mes)', () => {
+        const res = verificarMesYAnio(movimiento_4, 2020, 10);
         expect(res).toBe(true);
     });
     test('verificarMesYAnio ---> Verificar mes y año de un movimiento (false)', () => {
