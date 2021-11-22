@@ -173,7 +173,9 @@ color: #ffffff;
   float: right;
   margin-left: 5px;
 }
-
+.mdc-list-item {
+  font-size: 14px;
+}
 .active:after {
   content: "\2212";
 }
