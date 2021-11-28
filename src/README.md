@@ -67,6 +67,13 @@ Realizar una evaluación global de la calidad
 
 ## Reflexión
 
-Detalle del trabajo individual
+En esta segunda instancia aprendimos mucho, y no solo por el conocimiento teórico aplicado en práctica, sino también por ciertos inconvenientes que tuvimos en el desarrollo del proyecto. 
+Casi al final de la entrega, se incorporó un nuevo compañero al equipo, esto implicó dedicar algunas horas de trabajo en conjunto para que los tres integrantes estemos alineados. Además de esto, tuvimos dificultades con el entorno de desarrollo lo que implicó que el nuevo integrante no pueda trabajar de manera cómoda y fluída, esto no quiere decir que no tuvo participación, sino que por la falta de tiempo se hizo complejo solucionar determinados problemas.
+En resumen general creemos que fue una instancia muy rica, ponerse en el lugar de cada uno de los aactores que intervienen en el desarrollo de software fue muy valioso, nos permite entender y dimensionar el trabajo y esfuerzo de cada parte para lograr un objetivo en común.
+
+Alvaro Rameau: toda la instancia me pareció muy valiosa, pero personalmente destaco la parte de testing unitario. Me aportó muchísimo conocimiento y práctica para poder aplicar en el ámbito laboral. Si bien ya me había enfrentado en el trabajo al testing, nunca lo había hecho desde cero. Destaco y aplaudo que el curso incluya este módulo, ya que sé que es necesario para el trabaajo y sé que en muchos lugares se pide personal no solo con conocimientos de programación, sino también con conocimientos de testing.
+
+Stella Stella Steinfeld:
+Juan Romero: 
 
 Técnicas aplicadas y aprendizajes
