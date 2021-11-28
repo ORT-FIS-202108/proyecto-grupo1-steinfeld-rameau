@@ -43,6 +43,7 @@ Test unitarios en Jest
 Todas las secciones del dominio cuentan con un archivo Jest para los test unitarios que fueron debidamente corridos previo al code freeze
 
 100% cobertura en clases de dominio
+<img src="tests.png" alt="tests"/>
 
 | En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021).
 A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
