@@ -6,7 +6,8 @@ Fecha de entrega: 29-nov-2021
 ### Implementación de funciones principales:
 Debemos mencionar cambios en el alcance del proyecto, durante el desarrollo quitamos algunas funcionalidades, ya sea por falta de tiempo o porque se evaluó nuevamente y entendimos que no aportaban valor por sí mismas.
 
-A continuación se detallan las user stoy que no fueron implementadas: 
+A continuación se detallan las user stoy que no fueron implementadas:
+- **2 - Listado de Movimientos**: con respecto a esta user story, la funcionalidad general de listar los movimientos y ordenarlas por fecha esta implementado pero la parte de los filtros extra se decidio quitar del scope del proyecto para poder optimizar tiempos y concentrarnos en las funcionalidades ya implementadas mejorando los issues y el testeo de los mismos.
 - **5 - Selección de moneda**: el equipo comenzó la implementación de la funcionalidad pero luego de una evaluación determinamos que no aportaba valor ninguno. Para que el uso de múltiples monedas tenga sentido es necesario que esta funcionalidad sea completa, es decir, que no sea un simple selector, sino que aporte valor al sistema (conversión de moneda, soporte de gastos en distintas monedas, etc.).
 - **9 - Exportación de movimientos**: si bien esta funcionalidad fue implementada, debemos mencionar que se hizo una modificación, en la user story se menciona que el documento a descargar es en formato CSV, pero en la implementación el formato es un archivo compatible con Excel.
 - **10 - Visualización de movimientos en gráficos**: esta funcionalidad también sufrió modificaciones, se imlementó el gráfico de balance y el gráfico de movimientos por categoría pero solo para egresos. Se decidió recortar esta funcionalidad por falta de tiempo y problemas en la implementación.
@@ -76,6 +77,8 @@ Tenemos un entorno de _desarrollo_ y uno de producción. En el ultimo el código
 
 ### Sesiones de prueba exploratoria
 
+[Sesión "Movimientos"](../docs/testing/Sesion_Movimientos_Stella_Steinfeld.pdf)
+[Sesión "Categorias"](../docs/testing/Sesion_Categorias_Stella_Steinfeld.pdf)
 [Sesión "Gráficas"](../docs/testing/Sesion_Alvaro_Rameau.pdf)
 
 ## Reporte de issues
