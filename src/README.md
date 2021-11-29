@@ -25,70 +25,80 @@ El resto de las librerías en package.json son parte de la plantilla original de
 
 ## Interfaz de usuario
 
-Interfaz de usuario web / mobile (responsive)
+### Interfaz de usuario web / mobile (responsive)
+
 Al usar MDWC fue muy facil poder hacer un diseño responsivo de la aplicación ya que los componentes de Material UI son responsive. Igualmente fue debidamente probado a la hora de desarrollar.
+Se siguieron las pautas de estilos que se pedía en la letra del obligatorio, utilizando los colores y fuentes que en esta se detallaban. Se utilizó el sistema de colores de Material para valernos de colores auxiliares.
 
-Página única con navegación entre secciones
-La aplicacion cuenta solo con un index.html y tiene tabs que muestra y oculta cada Sección del sitio.
+Vale aclarar que respecto a la parte responsive entendemos que el sitio cumple las especificaciones pero sabemos que tiene muchas oportunidades de mejora.
 
-Implementación: Material Design Web Components
+### Estándar de accesibilidad WCAG
 
-Aplicar un sistema de diseño y principios de usabilidad
+**Plataforma utilizada para la verificación de estándares:** 
 
-Cumplimiento de estándar de accesibilidad WCAG
+https://achecker.achecks.ca/checker/index.php
 
-Seguir especificación de estilo
-Se siguieron con las especificaciones de estilos y colores dadas en la letra del obligatorio. Tambien se usaron como base de desarrollo e implementación los diseños aprobados en la entrega anterior.
+**Cinfiguración del validador:**
+
+![Configuración del validador](../docs/accesibilidad/configuracion.png)
+
+**Resultados de la validación:** 
+
+[Know problems](../docs/accesibilidad/Know_problems.pdf) (9)
+
+[Potetial problems](../docs/accesibilidad/Potential_Problems.pdf) (37)
+
+Si debemos tener una conclusión final sobre la accesibilidad, estamos medianamente conformes, entendemos que hay problemas y potenciales problemas que no fueron resueltos por falta de atención por parte del equipo.
 
 ## Codificación
 
 IDE Visual Studio Code: configuración común del equipo
 
-Estándares de codificación Google (HTML, CSS, JavaScript)
+### Estándares de codificación Google (HTML, CSS, JavaScript)
 Como estandares usamos las buenas practicas aprendidas en clase para la codificacion. A su vez en CSS usamos el pre codigo Sass indentando el mismo en modulos donde quede mas claro donde se anidan cada uno de los componentes.
 
-Buenas prácticas de OOP: separación de lógica e interfaz
-Para el dominio dividimos el codigo armando para cada seccion una carpeta. En interfaz mantuvimos el codigo dividido como ya estaba, estilos, scripts, etc. Lo que si intentamos fue que cada seccion tuviera su archivo para que el mantenimiento del codigo sea mas facil y accesible.
+### Buenas prácticas de OOP: separación de lógica e interfaz
+Para el dominio dividimos el codigo armando para cada sección una carpeta. En interfaz mantuvimos el codigo dividido como ya estaba, estilos, scripts, etc. Lo que si intentamos fue que cada seccion tuviera su archivo para que el mantenimiento del codigo sea mas facil y accesible.
 
-Análisis estático de código: mostrar reducción de problemas
+### Análisis estático de código: mostrar reducción de problemas
 Se utilizaron plugins de reporte de problemas en el codigo como SonarLint y LintJS.
 
 ## Test unitario
 
-Test unitarios en Jest
+### Test unitarios en Jest
 Todas las secciones del dominio cuentan con un archivo Jest para los test unitarios que fueron debidamente corridos previo al code freeze
 
-100% cobertura en clases de dominio
-
-
-| En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021).
-A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
+![Test unitario](../docs/testing/unitario.png)
 
 ## Test de sistema
 
-Realizar test de sistema en un entorno separado del desarrollo
-Tenemos un entorno de desarrollo y uno de produccion. Ene l ultimo el codigo generado es sin los comentarios y mimificado para poder emular lo mejor posible un servidor web activo.
+Tenemos un entorno de _desarrollo_ y uno de producción. En el ultimo el código generado no tiene comentarios y está mimificado para poder emular lo mejor posible un servidor web activo.
 
-Generar casos de prueba aplicando técnica partición equivalente
+### Sesiones de prueba exploratoria
 
-Detallar sesiones de prueba exploratoria
+[Sesión "Gráficas"](../docs/testing/Sesion_Alvaro_Rameau.pdf)
 
 ## Reporte de issues
 
-Reportar issues (bugs, improvements, missing features) en GitHub 
-Cada issue esta debidamente reportado en github
+Cada issue está debidamente reportado en github.
+Se definieron labels para la severidad del issue y para el dominio del mismo. Entre estos encontramos: **Interfaz HTML/CSS, FuncionalidadesJS, Alta, Media, Baja**.
 
-Aplicar buenas prácticas de reporte de issues
+#### Issues reportados por tipo: 
 
-Definir labels para tipos de issue y niveles de severidad
-Tambien definimos labels para desarrollo, para definir cada etapa del mismo
+|Tipo|Total|
+|---|---|
+|Interfaz HTML/CSS|3|
+|FuncionalidadesJS|1|
 
-Dejar issues abiertos para correcciones o mejoras futuras
+#### Issues reportados por severidad:
 
-Sumarizar número de issues reportados por tipo
+|Nivel|Total|
+|---|---|
+|Alta|1|
+|Media|1|
+|Baja|2|
 
-Realizar una evaluación global de la calidad
-Como evaluacion global de la calidad estamos conformes con lo entregado ya que conocemos los issues reportados y lasfeatures faltantes. Es más, las features faltantes fueron decididas por el equipo para poder dedicarnos a realizar un código de calidad y una Aplicación que cumpla con nuestras expectativas.
+Como evaluacion global de la calidad estamos conformes con lo entregado ya que conocemos los issues reportados y las features faltantes. Las features faltantes fueron decididas por el equipo para poder dedicarnos a realizar un código de calidad y una Aplicación que cumpla con nuestras expectativas.
 
 ## Reflexión
 
@@ -100,7 +110,7 @@ En resumen general creemos que fue una instancia muy rica, ponerse en el lugar d
 ### Reflexionez individuales
 **Alvaro Rameau**: toda la instancia me pareció muy valiosa, pero personalmente destaco la parte de testing unitario. Me aportó muchísimo conocimiento y práctica para poder aplicar en el ámbito laboral. Si bien ya me había enfrentado en el trabajo al testing, nunca lo había hecho desde cero. Destaco y aplaudo que el curso incluya este módulo, ya que sé que es necesario para el trabaajo y sé que en muchos lugares se pide personal no solo con conocimientos de programación, sino también con conocimientos de testing.
 
-**Stella Steinfeld**: En lo personal, al igual que Alvaro yo ya estaba familiarizada con el uso de JS y Sass ya que ambos lenguajes los utilizo en el dia a dia para desarrollar en el trabajo. Pero la parte de test automatizados fue algo que rescato mucho y la creacion de reportes de issues en github igual ya que muchas veces son cosas que el desarrollador en si no realiza tanto. Tambien fue un buen desafio el pensar en los tiempos y en la planificacion de todo el proyecto para tener una Aplicacion entregable y usable al final del proceso. 
+**Stella Steinfeld**: En lo personal, al igual que Alvaro yo ya estaba familiarizada con el uso de JS y Sass ya que ambos lenguajes los utilizo en el dia a dia para desarrollar en el trabajo. Pero la parte de test automatizados fue algo que rescato mucho y la creacion de reportes de issues en github igual ya que muchas veces son cosas que el desarrollador en si no realiza tanto. También fue un buen desafio el pensar en los tiempos y en la planificacion de todo el proyecto para tener una Aplicacion entregable y usable al final del proceso. 
 
 **Juan Romero**: 
 
