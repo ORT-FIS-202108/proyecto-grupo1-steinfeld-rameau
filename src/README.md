@@ -39,7 +39,7 @@ Vale aclarar que respecto a la parte responsive entendemos que el sitio cumple l
 
 https://achecker.achecks.ca/checker/index.php
 
-**Cinfiguración del validador:**
+**Configuración del validador:**
 
 ![Configuración del validador](../docs/accesibilidad/configuracion.png)
 
