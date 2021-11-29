@@ -28,7 +28,7 @@ El resto de las librerías en package.json son parte de la plantilla original de
 
 ### Interfaz de usuario web / mobile (responsive)
 
-Al usar MDWC fue muy facil poder hacer un diseño responsivo de la aplicación ya que los componentes de Material UI son responsive. Igualmente fue debidamente probado a la hora de desarrollar.
+Al usar MDWC fue muy fácil poder hacer un diseño responsivo de la aplicación, ya que los componentes de Material UI son responsive. Igualmente fue debidamente probado a la hora de desarrollar.
 Se siguieron las pautas de estilos que se pedía en la letra del obligatorio, utilizando los colores y fuentes que en esta se detallaban. Se utilizó el sistema de colores de Material para valernos de colores auxiliares.
 
 Vale aclarar que respecto a la parte responsive entendemos que el sitio cumple las especificaciones pero sabemos que tiene muchas oportunidades de mejora.
@@ -39,7 +39,7 @@ Vale aclarar que respecto a la parte responsive entendemos que el sitio cumple l
 
 https://achecker.achecks.ca/checker/index.php
 
-**Cinfiguración del validador:**
+**Configuración del validador:**
 
 ![Configuración del validador](../docs/accesibilidad/configuracion.png)
 
@@ -101,7 +101,7 @@ Se definieron labels para la severidad del issue y para el dominio del mismo. En
 |Media|1|
 |Baja|2|
 
-Como evaluacion global de la calidad estamos conformes con lo entregado ya que conocemos los issues reportados y las features faltantes. Las features faltantes fueron decididas por el equipo para poder dedicarnos a realizar un código de calidad y una Aplicación que cumpla con nuestras expectativas.
+Como evaluación global de la calidad, estamos conformes con lo entregado ya que conocemos los issues reportados y las features faltantes. Las features faltantes fueron decididas por el equipo para poder dedicarnos a realizar un código de calidad y una Aplicación que cumpla con nuestras expectativas.
 
 ## Reflexión
 
@@ -111,7 +111,7 @@ Casi al final de la entrega, se incorporó un nuevo compañero al equipo, esto i
 En resumen general creemos que fue una instancia muy rica, ponerse en el lugar de cada uno de los aactores que intervienen en el desarrollo de software fue muy valioso, nos permite entender y dimensionar el trabajo y esfuerzo de cada parte para lograr un objetivo en común.
 
 ### Reflexionez individuales
-**Alvaro Rameau**: toda la instancia me pareció muy valiosa, pero personalmente destaco la parte de testing unitario. Me aportó muchísimo conocimiento y práctica para poder aplicar en el ámbito laboral. Si bien ya me había enfrentado en el trabajo al testing, nunca lo había hecho desde cero. Destaco y aplaudo que el curso incluya este módulo, ya que sé que es necesario para el trabaajo y sé que en muchos lugares se pide personal no solo con conocimientos de programación, sino también con conocimientos de testing.
+**Alvaro Rameau**: Toda la instancia me pareció muy valiosa, pero personalmente destaco la parte de testing unitario. Me aportó muchísimo conocimiento y práctica para poder aplicar en el ámbito laboral. Si bien ya me había enfrentado en el trabajo al testing, nunca lo había hecho desde cero. Destaco y aplaudo que el curso incluya este módulo, ya que sé que es necesario para el trabaajo y sé que en muchos lugares se pide personal no solo con conocimientos de programación, sino también con conocimientos de testing.
 
 **Stella Steinfeld**: En lo personal, al igual que Alvaro yo ya estaba familiarizada con el uso de JS y Sass ya que ambos lenguajes los utilizo en el dia a dia para desarrollar en el trabajo. Pero la parte de test automatizados fue algo que rescato mucho y la creacion de reportes de issues en github igual ya que muchas veces son cosas que el desarrollador en si no realiza tanto. También fue un buen desafio el pensar en los tiempos y en la planificacion de todo el proyecto para tener una Aplicacion entregable y usable al final del proceso. 
 
